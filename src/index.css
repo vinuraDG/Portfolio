@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+
+*{
+  font-family: Saira, sans-serif;
+}
+
+:root {
+  --color-dark-100: #1a1a1a;
+  --color-dark-200: #1f1f1f;
+  --color-dark-300: #2d2d2d;
+  --color-dark-400: #3d3d3d;
+  --color-accent-purple: #8B5CF6;
+  --color-accent-pink: #EC4899;
+  --color-accent-blue: #3B82F6;
+}
+
+.typewriter {
+  overflow: hidden;
+  border-radius: 0.15em solid #8B5CF6;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 3s steps(20, end) forwards, blink-caret 0.75s step-end 4;
+}
+
+@keyframes typing {
+  from { width: 0;}
+  to {width: 15ch;}
+}
+
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #8B5CF6; }
+}
