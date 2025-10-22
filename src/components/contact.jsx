@@ -113,7 +113,7 @@ const Contact = () => {
                   Location
                 </h3>
                 <p className="text-gray-400">
-                  205/A, Edandawila Watta, Wahala Kananke, Imaduwa
+                  205/A, Edandawila Watta, Wahala Kananke, Imaduwa,Galle,Sri Lanka.
                 </p>
               </div>
             </div>
