@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import profileImg from "../assets/profile.avif";
 import { assets } from "../assets/assets";
 
 const Hero = () => {
