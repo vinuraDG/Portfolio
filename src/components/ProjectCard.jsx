@@ -22,20 +22,13 @@ const ProjectCard = ({ title, description, image, tech, demo, code }) => {
 
         {/* Buttons */}
         <div className="flex gap-2 mt-6">
-          <a
-            href={demo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 text-center px-4 py-2 bg-blue-700/30 rounded-lg font-medium hover:bg-blue-700 transition duration-300 text-white"
-          >
-            View Demo
-          </a>
+         
 
           <a
             href={code}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 text-center px-4 py-2 border border-blue-700 rounded-lg font-medium hover:bg-blue-700 transition duration-300 text-white"
+            className="flex-1 text-center px-4 py-2 bg-blue-700/30 rounded-lg font-medium hover:bg-blue-700 transition duration-300 text-white"
           >
             Code
           </a>
