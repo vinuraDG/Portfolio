@@ -17,6 +17,7 @@ export const assets = {
     projectImg5,
     projectImg6,
     
+    
 };
 
 export const aboutInfo = [

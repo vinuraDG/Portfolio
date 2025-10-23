@@ -25,17 +25,44 @@ const About = () => {
                 {/* Image and Text Side by Side */}
                 <div className="flex flex-col md:flex-row items-center gap-10">
                     {/* Image Section */}
-                    <div className="md:w-1/2 rounded-2xl overflow-hidden">
+                    <div className="md:w-1/2 rounded-2xl overflow-hidden flex flex-col items-center">
                         <motion.img
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.9, ease: "easeOut" }}
                             viewport={{ once: false, amount: 0.2 }}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover rounded-2xl"
                             src={assets.profileImg}
                             alt="profile"
                         />
+
+                        {/* Download Button under the image */}
+                        <div className="mt-7 flex justify-center">
+                            <a
+                                href="/CV.pdf"
+                                download
+                                className="group relative inline-flex items-center gap-2 px-7 py-3 rounded-full bg-gradient-to-r from-blue-600 to-blue-800 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="w-5 h-5 transition-transform duration-300 group-hover:translate-y-1"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    strokeWidth={2}
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M12 4v12m0 0l-4-4m4 4l4-4m-9 8h10"
+                                    />
+                                </svg>
+                                <span className="group-hover:underline">Download CV</span>
+                            </a>
+                        </div>
+
                     </div>
+
 
                     {/* Text Section */}
                     <motion.div
@@ -62,15 +89,15 @@ const About = () => {
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 {
-                                    aboutInfo.map((data, index)=>
-                                    <div key={index} className="bg-black rounded-2xl p-6 transition-transform duration-300 hover:-translate-y-2 cursor-pointer">
-                                        <div className="flex flex-col items-center text-center mb-4 text-4xl text-blue-700">
-                                            <data.icon/>
+                                    aboutInfo.map((data, index) =>
+                                        <div key={index} className="bg-black rounded-2xl p-6 transition-transform duration-300 hover:-translate-y-2 cursor-pointer">
+                                            <div className="flex flex-col items-center text-center mb-4 text-4xl text-blue-700">
+                                                <data.icon />
+                                            </div>
+                                            <h3 className=" text-xl font-semibold mb-5 text-white text-center">{data.title}</h3>
+                                            <p className="text-gray-500 text-center">{data.description}</p>
                                         </div>
-                                        <h3 className=" text-xl font-semibold mb-5 text-white text-center">{data.title}</h3>
-                                        <p className="text-gray-500 text-center">{data.description}</p>
-                                    </div>
-                                )
+                                    )
                                 }
                             </div>
 
