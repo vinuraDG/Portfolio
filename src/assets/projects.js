@@ -12,7 +12,6 @@ export const projects = [
     image: projectImg2,
     tech: ["Flutter", "Firebase"],
     icons: [FaVuejs, FaFire, FaCloud, FaDatabase],
-    demo: "#",
     code: "https://github.com/vinuraDG/TeaLink",
   },
   {
@@ -21,7 +20,6 @@ export const projects = [
     image: projectImg3,
     tech: ["Flutter", "Firebase"],
     icons: [FaReact, FaDatabase],
-    demo: "#",
     code: "https://github.com/vinuraDG/UniGPA",
   },
   {
@@ -30,7 +28,6 @@ export const projects = [
     image: projectImg4,
     tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
     icons: [FaReact, FaCloud],
-    demo: "#",
     code: "https://github.com/vinuraDG/Portfolio",
   },
   {
@@ -39,7 +36,6 @@ export const projects = [
     image: projectImg5,
     tech: ["HTML", "CSS", "PHP"],
     icons: [FaReact, FaNodeJs, FaDatabase],
-    demo: "#",
-    code: "#",
+    code: "https://github.com/vinuraDG/Island-Paradise",
   },
 ];
