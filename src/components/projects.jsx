@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 import { projects } from "../assets/projects";
 import { FaArrowRight } from "react-icons/fa";
@@ -11,7 +11,7 @@ const Projects = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
       viewport={{ once: false, amount: 0.2 }}
-      id='projects'
+      id="projects"
       className="py-20 bg-black/20"
     >
       <div className="container mx-auto px-6">
@@ -28,11 +28,16 @@ const Projects = () => {
             <ProjectCard key={index} {...project} />
           ))}
         </div>
+
+        {/* View more button */}
         <div className="text-center mt-12">
-            <a href="#" className="inline-flex items-center px-6 py-3 border border-blue-700 rounded-lg font-medium hover:bg-blue/20 transition duration-300">
-                <span>View More Projects</span>
-                <FaArrowRight className="ml-2"/>
-            </a>
+          <a
+            href="#"
+            className="inline-flex items-center px-6 py-3 border border-blue-700 rounded-lg font-medium hover:bg-blue-700/20 transition duration-300"
+          >
+            <span>View More Projects</span>
+            <FaArrowRight className="ml-2" />
+          </a>
         </div>
       </div>
     </motion.div>

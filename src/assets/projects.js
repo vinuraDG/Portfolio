@@ -1,11 +1,11 @@
-import { FaLightbulb, FaPaintBrush, FaCode, FaReact, FaServer, FaMobileAlt, FaTools, FaNodeJs, FaStripe, FaVuejs, FaFire, FaDatabase, FaCloud, FaRobot } from 'react-icons/fa';
-
+// src/assets/projects.js
 import projectImg2 from './project2.png';
 import projectImg3 from './project3.png';
 import projectImg4 from './project4.png';
 import projectImg5 from './project5.png';
+import { FaVuejs, FaFire, FaCloud, FaDatabase, FaReact, FaNodeJs } from 'react-icons/fa';
+
 export const projects = [
-  
   {
     title: "TeaLink",
     description: "TeaLink is a mobile app designed to help tea land owners (customers) and tea collectors manage the tea harvest and payment process more easily and efficiently.",
@@ -13,34 +13,33 @@ export const projects = [
     tech: ["Flutter", "Firebase"],
     icons: [FaVuejs, FaFire, FaCloud, FaDatabase],
     demo: "#",
-    code: "#",
+    code: "https://github.com/vinuraDG/TeaLink",
   },
   {
     title: "UniGPA",
-    description: "UniGPA is a mobile app that helps university students quickly calculate and track their GPA across semesters, manage subjects and grades, and view their overall academic performance.",
+    description: "UniGPA helps university students calculate and track GPA, manage grades, and view academic performance.",
     image: projectImg3,
     tech: ["Flutter", "Firebase"],
     icons: [FaReact, FaDatabase],
     demo: "#",
-    code: "#",
+    code: "https://github.com/vinuraDG/UniGPA",
   },
   {
     title: "Portfolio Website",
-    description: "A personal portfolio to showcase projects, skills, and blogs with dark/light mode support.",
+    description: "A personal portfolio showcasing projects, skills, and blogs with dark/light mode support.",
     image: projectImg4,
-    tech: ["Next.js", "Tailwind CSS", "Framer Motion", "Markdown"],
+    tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
     icons: [FaReact, FaCloud],
     demo: "#",
-    code: "#",
+    code: "https://github.com/vinuraDG/Portfolio",
   },
   {
-    title: "Web Site for Island Paradise",
-    description: "A visually stunning website showcasing a tropical island getaway with immersive images, smooth navigation, and responsive design.",
+    title: "Island Paradise Website",
+    description: "A responsive tourism website with immersive visuals and smooth navigation.",
     image: projectImg5,
-    tech: ["HTML-5", "CSS","PHP"],
+    tech: ["HTML", "CSS", "PHP"],
     icons: [FaReact, FaNodeJs, FaDatabase],
     demo: "#",
     code: "#",
   },
-  
 ];
