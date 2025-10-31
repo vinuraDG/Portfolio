@@ -39,26 +39,15 @@ const About = () => {
                         {/* Download Button under the image */}
                         <div className="mt-7 flex justify-center">
                             <a
-                                href="src/assets/CV.pdf"
-                                download
+                                href="/CV.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="group relative inline-flex items-center gap-2 px-7 py-3 rounded-full bg-gradient-to-r from-blue-600 to-blue-800 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out"
                             >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="w-5 h-5 transition-transform duration-300 group-hover:translate-y-1"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                    strokeWidth={2}
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        d="M12 4v12m0 0l-4-4m4 4l4-4m-9 8h10"
-                                    />
-                                </svg>
+                                {/* svg icon */}
                                 <span className="group-hover:underline">Download CV</span>
                             </a>
+
                         </div>
 
                     </div>
