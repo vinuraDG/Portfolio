@@ -19,7 +19,7 @@ const Hero = () => {
         Hi, I'm <span className="text-blue-700">Vinura Deelaka</span>
       </h1>
       <h2 className="text-2xl md:text-4xl font-semibold mb-6 text-white typewriter">
-        Full Stack Developer
+       Flutter Developer
       </h2>
       <p className="text-lg text-gray-300 mb-8">
         I create stunning web experiences with modern technologies and innovative design.
@@ -40,26 +40,35 @@ const Hero = () => {
       </div>
     </div>
 
-    {/* Image Section */}
-    <div className="md:w-1/2 flex justify-center">
-      <div className="relative w-64 h-64 md:w-80 md:h-80">
-       <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-700 to-white-500 animate-pulse opacity-70"></div>
+<div className="md:w-1/2 flex justify-center">
+  <div className="relative w-64 h-64 md:w-80 md:h-80 hex-container flex items-center justify-center">
 
-        <motion.img
-          src={assets.profileImg}
-          alt="Profile"
-          className="relative rounded-full w-64 h-64 md:w-80 md:h-80 object-cover z-10 animate-float"
-          
-          animate={{ y:[0, -20, 0] }}
-          transition={{ 
-            duration:4,
-            repeat:Infinity,
-            repeatType:"loop",
-            ease:"easeInOut"
-           }}
-        />
-      </div>
-    </div>
+    {/* Blue Hex Background */}
+    <div className="absolute inset-0 hex-bg opacity-90"></div>
+
+    {/* Image with bottom hex clip only */}
+    <motion.img
+      src={assets.projectImg6}
+      alt="Profile"
+     className="relative w-[85%] h-[85%] object-cover z-10 "
+            style={{
+              transform: 'rotate(-90deg) scale(1.5) translateY(-4%)',
+              objectFit: 'cover',
+              objectPosition: 'center top',
+              clipPath: 'polygon(0% 0%, 100% 0%, 100% 50%, 86% 75%, 50% 92.9%, 14% 75%, 0% 50%)'
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "easeInOut"
+            }}
+    />
+  </div>
+</div>
+
+
+
   </div>
 </motion.div>
 

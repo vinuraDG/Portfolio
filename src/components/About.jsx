@@ -39,14 +39,14 @@ const About = () => {
                         {/* Download Button under the image */}
                         <div className="mt-7 flex justify-center">
                             <a
-                                href="/CV.pdf"
+                                href="/Portfolio/CV.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group relative inline-flex items-center gap-2 px-7 py-3 rounded-full bg-gradient-to-r from-blue-600 to-blue-800 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out"
                             >
-                                {/* svg icon */}
-                                <span className="group-hover:underline">Download CV</span>
+                                <span className="group-hover:underline">View CV</span>
                             </a>
+
 
                         </div>
 
@@ -65,8 +65,9 @@ const About = () => {
                             <h3 className="text-2xl font-semibold mb-6 text-white">My Journey</h3>
                             <p className="text-gray-300 mb-6">
                                 My journey as a developer began with a deep curiosity for how technology shapes the world around us.
-                                Starting from exploring basic web design, I gradually expanded my skills into full-stack development—learning
-                                how to build seamless, interactive, and efficient applications from front to back. Each project I’ve worked on
+                                Currently pursuing my BSc (Hons) in Computer Science and Technology at Sabaragamuwa University of Sri Lanka,
+                                I started from exploring basic web design and gradually expanded my skills into full-stack development—learning
+                                how to build seamless, interactive, and efficient applications from front to back. Each project I've worked on
                                 has strengthened my understanding of modern frameworks, clean design, and user-centered development.
                             </p>
                             <p className="text-gray-300 mb-12">

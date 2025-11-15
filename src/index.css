@@ -34,3 +34,41 @@
   from, to { border-color: transparent; }
   50% { border-color: #8B5CF6; }
 }
+
+/* Container — NO CLIP */
+.hex-container {
+  position: relative;
+  transform: rotate(90deg);
+  overflow: visible;
+}
+
+/* Blue Hex — FULL hex shape */
+.hex-bg {
+  background: #1447e6;
+  filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.4));
+  clip-path: polygon(
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  );
+}
+
+/* Image — only bottom clipped */
+.hex-bottom-clip {
+  clip-path: polygon(
+    0% 0%,      /* Top left - keep full */
+    100% 0%,    /* Top right - keep full */
+    100% 50%,   /* Right side middle */
+    87.5% 75%,  /* Bottom right hex point */
+    50% 87.5%,  /* Bottom center point */
+    12.5% 75%,  /* Bottom left hex point */
+    0% 50%      /* Left side middle */
+  );
+
+  transform: rotate(-90deg) scale(1.4) translateY(-8%);
+  object-fit: cover;
+  object-position: center top;
+}
