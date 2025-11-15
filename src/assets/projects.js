@@ -26,7 +26,7 @@ export const projects = [
     title: "Portfolio Website",
     description: "A personal portfolio showcasing projects, skills, and blogs with dark/light mode support.",
     image: projectImg4,
-    tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
+    tech: ["React.js", "Tailwind CSS", "Framer Motion"],
     icons: [FaReact, FaCloud],
     code: "https://github.com/vinuraDG/Portfolio",
   },
