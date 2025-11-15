@@ -4,6 +4,7 @@ import About from "../components/About";
 import Skills from "../components/Skills";
 import Projects from "../components/projects";
 import Contact from "../components/contact";
+import Achievements from "../components/achievement";
 
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
             <About />
             <Skills />
             <Projects/>
+            <Achievements/>
             <Contact/>
             
            
