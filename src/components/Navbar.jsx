@@ -16,7 +16,7 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8">
-          {["home", "about", "skills", "projects", "contact"].map((item) => (
+          {["home", "about", "skills", "projects", "achievements", "contact"].map((item) => (
             <a
               key={item}
               href={`#${item}`}
@@ -55,7 +55,7 @@ const Navbar = () => {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="md:hidden mt-4 bg-black/5 h-screen rounded-lg p-6 flex flex-col space-y-6 shadow-lg text-center justify-center"
           >
-            {["home", "about", "skills", "projects", "experience", "contact"].map(
+            {["home", "about", "skills", "projects", "achievements", "contact"].map(
               (item) => (
                 <a
                   key={item}
