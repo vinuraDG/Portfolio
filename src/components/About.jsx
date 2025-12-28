@@ -38,7 +38,7 @@ const About = () => {
                         {/* Download Button under the image */}
                         <div className="mt-7 flex justify-center">
                             <a
-                                href="/Portfolio/CV.pdf"
+                                href="/CV.pdf"  
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group relative inline-flex items-center gap-2 px-7 py-3 rounded-full bg-gradient-to-r from-blue-600 to-blue-800 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out"
