@@ -2,6 +2,31 @@ import React from "react"
 import { motion } from 'framer-motion'
 import { aboutInfo, assets } from "../assets/assets";
 
+const Particle = ({ delay, duration, startX, startY, size, color, drift }) => {
+  return (
+    <motion.div
+      className="absolute rounded-full"
+      style={{
+        width: size,
+        height: size,
+        backgroundColor: color,
+        opacity: 0.6,
+      }}
+      initial={{ x: startX, y: startY, opacity: 0 }}
+      animate={{
+        x: [startX, startX + drift],
+        y: [startY, -100],
+        opacity: [0, 0.8, 0],
+      }}
+      transition={{
+        duration: duration,
+        delay: delay,
+        repeat: Infinity,
+        ease: "easeInOut",
+      }}
+    />
+  );
+};
 
 const About = () => {
     return (

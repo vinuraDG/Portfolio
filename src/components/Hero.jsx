@@ -43,15 +43,15 @@ const Hero = () => {
   }, [displayedText, isDeleting, titles, currentTitleIndex]);
 
   return (
-    <motion.div
+    <><motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeInOut" }}
       viewport={{ once: true }}
       id="home"
-      className="min-h-screen flex items-center pt-20 pb-16 bg-gradient-to-r from-[#1a1a1a] via-[#2d2d2d] to-[#1a1a1a]"
+      className="min-h-screen flex items-center pt-20 pb-16 relative overflow-hidden"
     >
-      <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+      <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between relative z-10">
         <div className="md:w-1/2 mb-10 md:mb-0">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">
             Hi, I'm <span className="text-blue-700">Vinura Deelaka</span>
@@ -65,12 +65,13 @@ const Hero = () => {
             innovative design.
           </p>
           <div className="flex space-x-4">
-            <a
-              href="#projects"
+
+           <a 
               className="px-6 py-3 bg-blue-700 rounded-lg font-medium text-white hover:bg-blue-800 transition duration-300"
             >
               View Work
             </a>
+
             <a
               href="#contact"
               className="px-6 py-3 border border-blue-700 rounded-lg font-medium text-white hover:bg-blue-700/20 transition duration-300"
@@ -78,8 +79,7 @@ const Hero = () => {
               Contact Me
             </a>
           </div>
-        </div>
-        <div className="md:w-1/2 flex justify-center">
+        </div><div className="md:w-1/2 flex justify-center">
           <div className="relative w-64 h-64 md:w-80 md:h-80 hex-container flex items-center justify-center">
 
             {/* Blue Hex Background */}
@@ -106,6 +106,7 @@ const Hero = () => {
         </div>
       </div>
     </motion.div>
+    </>
   );
 };
 
