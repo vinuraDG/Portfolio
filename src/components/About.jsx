@@ -1,7 +1,6 @@
 import React from "react"
 import { motion } from 'framer-motion'
 import { aboutInfo, assets } from "../assets/assets";
-import { data } from "react-router-dom";
 
 
 const About = () => {
