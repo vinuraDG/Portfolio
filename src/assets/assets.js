@@ -1,4 +1,4 @@
-import { FaLightbulb, FaPaintBrush, FaCode, FaReact, FaServer, FaMobileAlt, FaTools, FaNodeJs, FaStripe, FaVuejs, FaFire, FaDatabase, FaCloud, FaRobot } from 'react-icons/fa';
+import { FaLightbulb, FaPaintBrush, FaCode, FaReact, FaServer, FaMobileAlt, FaTools, FaNodeJs, FaStripe, FaVuejs, FaFire, FaDatabase, FaCloud, FaRobot, FaLinux } from 'react-icons/fa';
 
 // Only import images that actually exist
 import profileImg from '../assets/profile.jpg';
@@ -9,6 +9,7 @@ import projectImg5 from '../assets/project5.png';
 import projectImg7 from '../assets/project6.png';
 import projectImg8 from '../assets/project7.png';
 import projectImg6 from '../assets/profileR.png';
+import aboutImg from '../assets/about_image.png';
 
 
 export const assets = {
@@ -20,6 +21,7 @@ export const assets = {
     projectImg6,
     projectImg7,
     projectImg8,
+    aboutImg,
     
 };
 
@@ -55,7 +57,7 @@ export const skills = [
         title: 'Backend Development',
         icon: FaServer,
         description: 'Creating robust server-side applications and RESTful APIs.',
-        tags: ['Firebase', 'Laravel']
+        tags: ['Firebase']
     },
     {
         title: 'Programming Languages',
@@ -75,6 +77,13 @@ export const skills = [
         description: 'Building cross-platform mobile applications with modern tools.',
         tags: ['Flutter']
     },
+    {
+        title: 'Operating Systems & Tools',
+        icon: FaLinux,
+        description: 'Building cross-platform mobile applications with modern tools.',
+        tags: ['Linux (Ubuntu)', 'Command-line proficiency', 'Shell scripting']
+    },
+
     {
         title: 'Tools & Technologies',
         icon: FaTools,
