@@ -15,31 +15,44 @@ const Achievements = () => {
       title: "Flutter and Dart: Developing iOS, Android, and Mobile Apps",
       provider: "IBM",
       icon: "📱",
-      link: "https://www.coursera.org/account/accomplishments/verify/INX2RZASBFQX" 
+      link: "https://www.coursera.org/account/accomplishments/verify/INX2RZASBFQX"
     },
+    {
+      title: "Machine Learning with Python",
+      provider: "IBM",
+      icon: "📊",
+      link: "https://www.coursera.org/account/accomplishments/verify/WB45O7F6VP8S"
+    }
+    ,
     {
       title: "Python for Data Science, AI & Development",
       provider: "IBM",
       icon: "🐍",
-      link: "https://www.coursera.org/account/accomplishments/verify/03VCE0CEQFPE" 
+      link: "https://www.coursera.org/account/accomplishments/verify/03VCE0CEQFPE"
+    },
+    {
+      title: "Developing Front-End Apps with React",
+      provider: "IBM",
+      icon: "⚛️",
+      link: "https://www.coursera.org/account/accomplishments/verify/IXPVAN24ERNS"
     },
     {
       title: "Developing AI Applications with Python and Flask",
       provider: "IBM",
       icon: "🤖",
-      link: "https://www.coursera.org/account/accomplishments/verify/FEVTOIQDZ42I" 
+      link: "https://www.coursera.org/account/accomplishments/verify/FEVTOIQDZ42I"
     },
     {
       title: "Getting Started with Git and GitHub",
       provider: "IBM",
       icon: "🔧",
-      link: "https://www.coursera.org/account/accomplishments/verify/ZVK9EU11A8EQ" 
+      link: "https://www.coursera.org/account/accomplishments/verify/ZVK9EU11A8EQ"
     },
     {
       title: "Hands-on Introduction to Linux Commands and Shell Scripting",
       provider: "IBM",
       icon: "💻",
-      link: "https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/home/welcome" 
+      link: "https://www.coursera.org/account/accomplishments/verify/DG8SXGBE6KPX"
     }
   ];
 
@@ -66,22 +79,20 @@ const Achievements = () => {
           <div className="flex justify-center gap-4 mt-8">
             <button
               onClick={() => setActiveTab("awards")}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                activeTab === "awards"
-                  ? "bg-blue-600 text-white shadow-lg shadow-blue-500/50"
-                  : "bg-gray-800 text-gray-400 hover:bg-gray-700"
-              }`}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${activeTab === "awards"
+                ? "bg-blue-600 text-white shadow-lg shadow-blue-500/50"
+                : "bg-gray-800 text-gray-400 hover:bg-gray-700"
+                }`}
             >
               <FaTrophy className="inline mr-2" />
               Awards
             </button>
             <button
               onClick={() => setActiveTab("certificates")}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                activeTab === "certificates"
-                  ? "bg-blue-600 text-white shadow-lg shadow-blue-500/50"
-                  : "bg-gray-800 text-gray-400 hover:bg-gray-700"
-              }`}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${activeTab === "certificates"
+                ? "bg-blue-600 text-white shadow-lg shadow-blue-500/50"
+                : "bg-gray-800 text-gray-400 hover:bg-gray-700"
+                }`}
             >
               <FaCertificate className="inline mr-2" />
               Certificates
@@ -141,8 +152,8 @@ const Achievements = () => {
               <div className="mb-8">
                 <h4 className="text-2xl font-semibold text-white mb-4">About the Project</h4>
                 <p className="text-gray-300 leading-relaxed">
-                  A revolutionary mobile app for football in Sri Lanka that bridges the gap in sports management. 
-                  MatchMate LK provides a verified, mobile-based scheduling and record-keeping platform, 
+                  A revolutionary mobile app for football in Sri Lanka that bridges the gap in sports management.
+                  MatchMate LK provides a verified, mobile-based scheduling and record-keeping platform,
                   transforming how football is organized and tracked across the country.
                 </p>
               </div>
@@ -153,7 +164,7 @@ const Achievements = () => {
                   <span className="font-semibold text-blue-400">Event:</span> 2nd International Conference on Applied Sports (ICAS)
                 </p>
                 <p className="text-gray-400 text-sm mt-2">
-                  <span className="font-semibold text-blue-400">Organized by:</span> Department of Sports Sciences and Physical Education, 
+                  <span className="font-semibold text-blue-400">Organized by:</span> Department of Sports Sciences and Physical Education,
                   Faculty of Applied Sciences, Sabaragamuwa University of Sri Lanka
                 </p>
               </div>

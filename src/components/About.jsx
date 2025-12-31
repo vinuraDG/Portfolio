@@ -61,9 +61,9 @@ const About = () => {
                   />
                   <defs>
                     <linearGradient id="blobGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="20%" style={{ stopColor: '#072191ff', stopOpacity: 0.85 }} />
+                      <stop offset="20%" style={{ stopColor: '#072191ff', stopOpacity: 0.90 }} />
                       <stop offset="50%" style={{ stopColor: '#3b82f6', stopOpacity: 0.75 }} />
-                      <stop offset="100%" style={{ stopColor: '#7cafecff', stopOpacity: 0.65 }} />
+                      <stop offset="100%" style={{ stopColor: '#7cafecff', stopOpacity: 0.20 }} />
                     </linearGradient>
                   </defs>
                 </svg>
@@ -88,34 +88,9 @@ const About = () => {
                 />
               </motion.div>
 
-              {/* Stat Cards */}
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.7, delay: 0.3 }}
-                className="absolute top-6 right-0 sm:top-16 sm:right-1 bg-white px-6 sm:px-9 py-3 rounded-2xl shadow-2xl border"
-              >
-                <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-                  2+
-                </div>
-                <div className="text-xs sm:text-sm text-gray-700 font-medium">
-                  Years of Experience
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.7, delay: 0.5 }}
-                className="absolute bottom-45 left-0 sm:top-2/4 sm:-left-32 bg-white px-6 sm:px-9 py-3 rounded-2xl shadow-2xl border"
-              >
-                <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-                  10+
-                </div>
-                <div className="text-xs sm:text-sm text-gray-700 font-medium">
-                  Projects Completed
-                </div>
-              </motion.div>
+             
+                
+              
             </div>
 
             {/* CV Button */}
