@@ -42,6 +42,13 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, [displayedText, isDeleting, titles, currentTitleIndex]);
 
+  // Statistics data
+  const stats = [
+    
+    { number: "10+", label: "Project done" },
+    { number: "5+", label: "Completed Certificates" }
+  ];
+
   return (
     <><motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -64,6 +71,28 @@ const Hero = () => {
             I create stunning web experiences with modern technologies and
             innovative design.
           </p>
+          {/* Statistics Section */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-9 mb-10">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <h3 className="text-2xl md:text-3xl font-bold text-blue-700 mb-1">
+                  {stat.number}
+                </h3>
+                <p className="text-gray-400 text-xs md:text-sm font-medium">
+                  {stat.label}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+
+
           <div className="flex space-x-4">
 
            <a 
@@ -79,6 +108,8 @@ const Hero = () => {
               Contact Me
             </a>
           </div>
+
+          
         </div><div className="md:w-1/2 flex justify-center">
           <div className="relative w-64 h-64 md:w-80 md:h-80 hex-container flex items-center justify-center">
 
