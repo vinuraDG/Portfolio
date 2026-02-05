@@ -121,12 +121,12 @@ const Hero = () => {
             <motion.img
               src={assets.projectImg6}
               alt="Profile"
-              className="relative w-[85%] h-[85%] object-cover z-10 "
+              className="relative w-[90%] h-[89%] object-cover z-10 "
               style={{
-                transform: 'rotate(-90deg) scale(1.5) translateY(-4%)',
+                transform: 'rotate(-90deg) scale(1.46) translateY(-3%)',
                 objectFit: 'cover',
                 objectPosition: 'center top',
-                clipPath: 'polygon(0% 0%, 100% 0%, 100% 50%, 86% 75%, 50% 92.9%, 14% 75%, 0% 50%)'
+                clipPath: 'polygon(0% 0%, 100% 0%, 100% 63%, 87% 73%, 50% 92.9%, 11% 72%, 0% 50%)'
               }}
               transition={{
                 duration: 4,
