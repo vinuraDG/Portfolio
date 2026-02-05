@@ -126,7 +126,7 @@ const Hero = () => {
                 transform: 'rotate(-90deg) scale(1.46) translateY(-3%)',
                 objectFit: 'cover',
                 objectPosition: 'center top',
-                clipPath: 'polygon(0% 0%, 100% 0%, 100% 63%, 87% 73%, 50% 92.9%, 11% 72%, 0% 50%)'
+                clipPath: 'polygon(0% 0%, 100% 0%, 100% 62%, 87% 73%, 50% 92.9%, 12% 72%, 0% 50%)'
               }}
               transition={{
                 duration: 4,

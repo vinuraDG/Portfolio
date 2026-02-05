@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaEnvelope, FaFacebook, FaGithub, FaMapMarkerAlt, FaPhone, FaTwitter } from "react-icons/fa";
+import { FaEnvelope, FaFacebook, FaGithub,FaMedium , FaMapMarkerAlt, FaPhone, FaTwitter } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 
 const Contact = () => {
@@ -163,6 +163,13 @@ const Contact = () => {
                   className="w-12 h-12 rounded-full bg-black flex items-center justify-center text-blue-700 hover:bg-blue-700 hover:text-white transition duration-300"
                 >
                   <FaFacebook />
+                </a>
+
+                <a
+                  href="https://medium.com/@vinuragamage123"
+                  className="w-12 h-12 rounded-full bg-black flex items-center justify-center text-blue-700 hover:bg-blue-700 hover:text-white transition duration-300"
+                >
+                  <FaMedium />
                 </a>
               </div>
             </div>
