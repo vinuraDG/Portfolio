@@ -44,7 +44,7 @@ const Hero = () => {
 
   // Statistics data
   const stats = [
-    
+
     { number: "10+", label: "Project done" },
     { number: "5+", label: "Completed Certificates" }
   ];
@@ -68,8 +68,9 @@ const Hero = () => {
             <span className="border-r-2 border-white animate-pulse ml-1" />
           </h2>
           <p className="text-lg text-gray-300 mb-8">
-            I create stunning web experiences with modern technologies and
-            innovative design.
+            I create elegant mobile applications that blend performance with beautiful design.
+            My focus is on delivering user-centered experiences through Flutter development,
+            thoughtful UI/UX design, and AI-driven innovation. I love turning complex ideas into simple, functional, and impactful digital products.
           </p>
           {/* Statistics Section */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-9 mb-10">
@@ -95,7 +96,7 @@ const Hero = () => {
 
           <div className="flex space-x-4">
 
-           <a 
+            <a
               className="px-6 py-3 bg-blue-700 rounded-lg font-medium text-white hover:bg-blue-800 transition duration-300"
             >
               View Work
@@ -109,7 +110,7 @@ const Hero = () => {
             </a>
           </div>
 
-          
+
         </div><div className="md:w-1/2 flex justify-center">
           <div className="relative w-64 h-64 md:w-80 md:h-80 hex-container flex items-center justify-center">
 
