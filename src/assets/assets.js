@@ -8,6 +8,7 @@ import projectImg4 from '../assets/project4.png';
 import projectImg5 from '../assets/project5.png';
 import projectImg7 from '../assets/project6.png';
 import projectImg8 from '../assets/project7.png';
+import projectImg9 from '../assets/project8.png'; 
 import projectImg6 from '../assets/profileR.png';
 import aboutImg from '../assets/about_image.png';
 
@@ -21,6 +22,7 @@ export const assets = {
     projectImg6,
     projectImg7,
     projectImg8,
+    projectImg9,
     aboutImg,
     
 };
