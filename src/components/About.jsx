@@ -1,49 +1,30 @@
 import React from "react";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import { aboutInfo, assets } from "../assets/assets";
-
-const Particle = ({ delay, duration, startX, startY, size, color, drift }) => {
-  return (
-    <motion.div
-      className="absolute rounded-full"
-      style={{
-        width: size,
-        height: size,
-        backgroundColor: color,
-        opacity: 0.6,
-      }}
-      initial={{ x: startX, y: startY, opacity: 0 }}
-      animate={{
-        x: [startX, startX + drift],
-        y: [startY, -100],
-        opacity: [0, 0.8, 0],
-      }}
-      transition={{
-        duration,
-        delay,
-        repeat: Infinity,
-        ease: "easeInOut",
-      }}
-    />
-  );
-};
 
 const About = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: 'easeInOut' }}
+      transition={{ duration: 0.6, ease: "easeInOut" }}
       viewport={{ once: true }}
       id="about"
-      className="py-16 md:py-20 bg-black/5"
+      className="py-16 md:py-20"
+      style={{ background: "var(--bg-card)" }}
     >
       <div className="container mx-auto px-4 sm:px-6">
-        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-4 text-white">
-          About <span className="text-blue-700">Me</span>
+        <h2
+          className="text-2xl sm:text-3xl font-bold text-center mb-4"
+          style={{ color: "var(--text-primary)" }}
+        >
+          About <span style={{ color: "var(--accent)" }}>Me</span>
         </h2>
 
-        <p className="text-gray-400 text-center max-w-2xl mx-auto mb-12 sm:mb-16 text-sm sm:text-base">
+        <p
+          className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 text-sm sm:text-base"
+          style={{ color: "var(--text-muted)" }}
+        >
           Get to know about my background and passion
         </p>
 
@@ -61,9 +42,9 @@ const About = () => {
                   />
                   <defs>
                     <linearGradient id="blobGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="20%" style={{ stopColor: '#072191ff', stopOpacity: 0.90 }} />
-                      <stop offset="50%" style={{ stopColor: '#3b82f6', stopOpacity: 0.75 }} />
-                      <stop offset="100%" style={{ stopColor: '#7cafecff', stopOpacity: 0.20 }} />
+                      <stop offset="20%" style={{ stopColor: "#072191ff", stopOpacity: 0.9 }} />
+                      <stop offset="50%" style={{ stopColor: "#3b82f6", stopOpacity: 0.75 }} />
+                      <stop offset="100%" style={{ stopColor: "#7cafecff", stopOpacity: 0.2 }} />
                     </linearGradient>
                   </defs>
                 </svg>
@@ -82,15 +63,11 @@ const About = () => {
                   alt="profile"
                   className="w-auto h-full object-contain drop-shadow-2xl"
                   style={{
-                    maskImage: 'linear-gradient(to bottom, black 90%, transparent 100%)',
-                    WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)'
+                    maskImage: "linear-gradient(to bottom, black 90%, transparent 100%)",
+                    WebkitMaskImage: "linear-gradient(to bottom, black 80%, transparent 100%)",
                   }}
                 />
               </motion.div>
-
-             
-                
-              
             </div>
 
             {/* CV Button */}
@@ -99,7 +76,17 @@ const About = () => {
                 href="/CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-gradient-to-r from-blue-600 to-blue-800 text-white font-semibold shadow-lg hover:shadow-xl transition"
+                className="inline-flex items-center gap-2 px-7 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition"
+                style={{
+                  background: "var(--accent)",
+                  color: "white",
+                }}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.background = "var(--accent-hover)")
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.background = "var(--accent)")
+                }
               >
                 View CV
               </a>
@@ -114,31 +101,53 @@ const About = () => {
             className="md:w-1/2"
           >
             <div className="rounded-2xl p-6 sm:p-8">
-              <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-white">
+              <h3
+                className="text-xl sm:text-2xl font-semibold mb-6"
+                style={{ color: "var(--text-primary)" }}
+              >
                 My Journey
               </h3>
 
-              <p className="text-gray-300 text-sm sm:text-base mb-6">
+              <p
+                className="text-sm sm:text-base mb-6"
+                style={{ color: "var(--text-muted)" }}
+              >
                 My journey as a developer began with a deep curiosity for how technology shapes the world around us...
               </p>
 
-              <p className="text-gray-300 text-sm sm:text-base mb-10">
-                Today, I’m passionate about creating digital experiences that are not only functional but also visually engaging...
+              <p
+                className="text-sm sm:text-base mb-10"
+                style={{ color: "var(--text-muted)" }}
+              >
+                Today, I'm passionate about creating digital experiences that are not only functional but also visually engaging...
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {aboutInfo.map((data, index) => (
                   <div
                     key={index}
-                    className="bg-black rounded-2xl p-6 hover:-translate-y-2 transition"
+                    className="rounded-2xl p-6 hover:-translate-y-2 transition"
+                    style={{
+                      background: "var(--bg-elevated)",
+                      border: "1px solid var(--border-color)",
+                    }}
                   >
-                    <div className="flex justify-center text-4xl text-blue-700 mb-4">
+                    <div
+                      className="flex justify-center text-4xl mb-4"
+                      style={{ color: "var(--accent)" }}
+                    >
                       <data.icon />
                     </div>
-                    <h3 className="text-lg sm:text-xl font-semibold text-white text-center mb-3">
+                    <h3
+                      className="text-lg sm:text-xl font-semibold text-center mb-3"
+                      style={{ color: "var(--text-primary)" }}
+                    >
                       {data.title}
                     </h3>
-                    <p className="text-gray-500 text-sm text-center">
+                    <p
+                      className="text-sm text-center"
+                      style={{ color: "var(--text-muted)" }}
+                    >
                       {data.description}
                     </p>
                   </div>

@@ -88,7 +88,7 @@ export const projects = [
     image: projectImg9,
     tech: ["Flutter", "Firebase", "Cloud Firestore", "Cloudinary", "Git & GitHub"],
     icons: [FaMobileAlt, FaFire, FaCloud, FaDatabase],
-    code: "https://github.com/vinuraDG/Island-Paradise",
+    code: "https://github.com/vinuraDG/Expenses_Tracker1",
     features: [
       "Categorized expense and income logging",
       "Monthly budget limits with alert notifications",
@@ -150,7 +150,7 @@ export const projects = [
     image: projectImg8,
     tech: ["Flutter", "Firebase", "Cloud Firestore", "Git & GitHub"],
     icons: [FaMobileAlt, FaFire, FaCloud, FaDatabase],
-    code: "https://github.com/vinuraDG/Island-Paradise",
+    code: "https://github.com/vinuraDG/Convo",
     features: [
       "Real-time one-on-one messaging with read receipts",
       "Voice and video calling support",
@@ -171,7 +171,7 @@ export const projects = [
     image: projectImg7,
     tech: ["Flutter", "Firebase", "Local Storage", "Git & GitHub"],
     icons: [FaMobileAlt, FaFire, FaCloud, FaDatabase],
-    code: "https://github.com/vinuraDG/Island-Paradise",
+    code: "https://github.com/vinuraDG/DialBook",
     features: [
       "Rich contact profiles with photos and labels",
       "Multiple phone numbers per contact",
