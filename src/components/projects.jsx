@@ -30,16 +30,7 @@ const Projects = () => {
         </div>
 
 
-        {/* View more button */}
-        <div className="text-center mt-12">
-          <a
-            href="#"
-            className="inline-flex items-center px-6 py-3 border border-blue-700 rounded-lg font-medium hover:bg-blue-700/20 transition duration-300"
-          >
-            <span>View More Projects</span>
-            <FaArrowRight className="ml-2" />
-          </a>
-        </div>
+        
       </div>
     </motion.div>
   );
