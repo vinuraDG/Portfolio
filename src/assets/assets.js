@@ -1,20 +1,20 @@
-import { FaLightbulb, FaPaintBrush, FaCode, FaReact, FaServer, FaMobileAlt, FaTools, FaNodeJs, FaStripe, FaVuejs, FaFire, FaDatabase, FaCloud, FaRobot, FaLinux } from 'react-icons/fa';
+// src/assets/assets.js
 
-// Only import images that actually exist
-import profileImg from '../assets/profile.jpg';
-import projectImg2 from '../assets/project2.png';
-import projectImg3 from '../assets/project3.png';
-import projectImg4 from '../assets/project4.png';
-import projectImg5 from '../assets/project5.png';
-import projectImg7 from '../assets/project6.png';
-import projectImg8 from '../assets/project7.png';
-import projectImg9 from '../assets/project8.png'; 
-import projectImg10 from '../assets/project9.png';
-import projectImg11 from '../assets/project10.png'; 
-import projectImg12 from '../assets/project11.png'; 
-import projectImg6 from '../assets/profileR.png';
-import aboutImg from '../assets/about_image.png';
+import { FaLightbulb, FaPaintBrush, FaCode, FaReact, FaServer, FaMobileAlt, FaTools, FaLinux, FaDatabase } from 'react-icons/fa';
 
+import profileImg from './profile.jpg';
+import projectImg2 from './project2.png';
+import projectImg3 from './project3.png';
+import projectImg4 from './project4.png';
+import projectImg5 from './project5.png';
+import projectImg6 from './profileR.png';
+import projectImg7 from './project6.png';
+import projectImg8 from './project7.png';
+import projectImg9 from './project8.png';
+import projectImg10 from './project9.png';
+import projectImg11 from './project10.png';
+import projectImg12 from './project11.png';
+import aboutImg from './about_image.png';
 
 export const assets = {
     profileImg,
@@ -30,7 +30,6 @@ export const assets = {
     projectImg11,
     projectImg12,
     aboutImg,
-    
 };
 
 export const aboutInfo = [
@@ -88,10 +87,9 @@ export const skills = [
     {
         title: 'Operating Systems & Tools',
         icon: FaLinux,
-        description: 'Building cross-platform mobile applications with modern tools.',
+        description: 'Experience with Linux environments and command-line tooling.',
         tags: ['Linux (Ubuntu)', 'Command-line proficiency', 'Shell scripting']
     },
-
     {
         title: 'Tools & Technologies',
         icon: FaTools,
@@ -99,4 +97,3 @@ export const skills = [
         tags: ['Git & GitHub', 'Figma']
     }
 ];
-

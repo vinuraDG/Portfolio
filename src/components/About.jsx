@@ -1,17 +1,12 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { aboutInfo, assets } from "../assets/assets";
 
 const About = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeInOut" }}
-      viewport={{ once: true }}
+    <div
       id="about"
       className="py-16 md:py-20"
-      style={{ background: "var(--bg-card)" }}
+      
     >
       <div className="container mx-auto px-4 sm:px-6">
         <h2
@@ -51,13 +46,7 @@ const About = () => {
               </div>
 
               {/* Image */}
-              <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.9, ease: "easeOut" }}
-                viewport={{ once: false, amount: 0.2 }}
-                className="relative z-10 w-full h-full flex items-center justify-center"
-              >
+              <div className="relative z-10 w-full h-full flex items-center justify-center">
                 <img
                   src={assets.aboutImg}
                   alt="profile"
@@ -67,7 +56,7 @@ const About = () => {
                     WebkitMaskImage: "linear-gradient(to bottom, black 80%, transparent 100%)",
                   }}
                 />
-              </motion.div>
+              </div>
             </div>
 
             {/* CV Button */}
@@ -77,16 +66,9 @@ const About = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-7 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition"
-                style={{
-                  background: "var(--accent)",
-                  color: "white",
-                }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.background = "var(--accent-hover)")
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.background = "var(--accent)")
-                }
+                style={{ background: "var(--accent)", color: "white" }}
+                onMouseEnter={(e) => (e.currentTarget.style.background = "var(--accent-hover)")}
+                onMouseLeave={(e) => (e.currentTarget.style.background = "var(--accent)")}
               >
                 View CV
               </a>
@@ -94,12 +76,7 @@ const About = () => {
           </div>
 
           {/* Text Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: "easeOut" }}
-            className="md:w-1/2"
-          >
+          <div className="md:w-1/2">
             <div className="rounded-2xl p-6 sm:p-8">
               <h3
                 className="text-xl sm:text-2xl font-semibold mb-6"
@@ -108,17 +85,11 @@ const About = () => {
                 My Journey
               </h3>
 
-              <p
-                className="text-sm sm:text-base mb-6"
-                style={{ color: "var(--text-muted)" }}
-              >
+              <p className="text-sm sm:text-base mb-6" style={{ color: "var(--text-muted)" }}>
                 My journey as a developer began with a deep curiosity for how technology shapes the world around us...
               </p>
 
-              <p
-                className="text-sm sm:text-base mb-10"
-                style={{ color: "var(--text-muted)" }}
-              >
+              <p className="text-sm sm:text-base mb-10" style={{ color: "var(--text-muted)" }}>
                 Today, I'm passionate about creating digital experiences that are not only functional but also visually engaging...
               </p>
 
@@ -128,14 +99,11 @@ const About = () => {
                     key={index}
                     className="rounded-2xl p-6 hover:-translate-y-2 transition"
                     style={{
-                      background: "var(--bg-elevated)",
+                     background: "var(--bg-surface)",
                       border: "1px solid var(--border-color)",
                     }}
                   >
-                    <div
-                      className="flex justify-center text-4xl mb-4"
-                      style={{ color: "var(--accent)" }}
-                    >
+                    <div className="flex justify-center text-4xl mb-4" style={{ color: "var(--accent)" }}>
                       <data.icon />
                     </div>
                     <h3
@@ -144,20 +112,17 @@ const About = () => {
                     >
                       {data.title}
                     </h3>
-                    <p
-                      className="text-sm text-center"
-                      style={{ color: "var(--text-muted)" }}
-                    >
+                    <p className="text-sm text-center" style={{ color: "var(--text-muted)" }}>
                       {data.description}
                     </p>
                   </div>
                 ))}
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

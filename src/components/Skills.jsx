@@ -1,17 +1,12 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { skills } from "../assets/assets";
 
 const Skills = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, ease: "easeOut" }}
-      viewport={{ once: false, amount: 0.2 }}
+    <div
       id="skills"
       className="py-20"
-      style={{ background: "var(--bg-card)" }}
+     
     >
       <div className="container mx-auto px-6">
         <h2
@@ -39,29 +34,17 @@ const Skills = () => {
               onMouseEnter={e => e.currentTarget.style.borderColor = "var(--accent)"}
               onMouseLeave={e => e.currentTarget.style.borderColor = "var(--border-color)"}
             >
-              {/* Icon + Title */}
               <div className="flex flex-col items-center text-center mb-4">
-                <skill.icon
-                  className="w-12 h-12 mb-3"
-                  style={{ color: "var(--accent)" }}
-                />
-                <h3
-                  className="text-xl font-semibold mb-2"
-                  style={{ color: "var(--text-primary)" }}
-                >
+                <skill.icon className="w-12 h-12 mb-3" style={{ color: "var(--accent)" }} />
+                <h3 className="text-xl font-semibold mb-2" style={{ color: "var(--text-primary)" }}>
                   {skill.title}
                 </h3>
               </div>
 
-              {/* Description */}
-              <p
-                className="mb-4 text-center text-sm"
-                style={{ color: "var(--text-muted)" }}
-              >
+              <p className="mb-4 text-center text-sm" style={{ color: "var(--text-muted)" }}>
                 {skill.description}
               </p>
 
-              {/* Tags */}
               <div className="flex flex-wrap justify-center gap-2">
                 {skill.tags.map((tech) => (
                   <span
@@ -81,7 +64,7 @@ const Skills = () => {
           ))}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

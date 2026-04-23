@@ -7,14 +7,14 @@ const ProjectCard = ({ id, title, description, image, tech, code }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="group bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl overflow-hidden hover:-translate-y-2 hover:border-[var(--accent)]/40 hover:shadow-2xl hover:shadow-[var(--accent-glow)] transition-all duration-300 cursor-pointer w-full flex flex-col">
+    <div className="group bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl overflow-hidden hover:-translate-y-2 hover:border-[var(--accent)]/40 hover:shadow-2xl hover:shadow-[var(--accent-glow)] transition-all duration-300 cursor-pointer w-full min-w-0 flex flex-col h-full">
 
       {/* Image */}
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden flex-shrink-0">
         <img
           src={image}
           alt={title}
-          className="w-full h-48 sm:h-56 md:h-60 object-cover group-hover:scale-105 transition-transform duration-500"
+          className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
         />
 
         <div className="absolute inset-0 bg-[var(--accent)]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -28,9 +28,9 @@ const ProjectCard = ({ id, title, description, image, tech, code }) => {
       </div>
 
       {/* Content */}
-      <div className="p-4 sm:p-5 flex flex-col flex-1">
+      <div className="p-4 flex flex-col flex-1">
 
-        <h3 className="text-lg sm:text-xl font-semibold text-[var(--text-primary)] mb-2 group-hover:text-[var(--accent)] transition-colors">
+        <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2 group-hover:text-[var(--accent)] transition-colors">
           {title}
         </h3>
 
@@ -48,7 +48,6 @@ const ProjectCard = ({ id, title, description, image, tech, code }) => {
               {item}
             </span>
           ))}
-
           {tech.length > 3 && (
             <span className="bg-[var(--bg-elevated)] text-[var(--text-muted)] px-2.5 py-0.5 rounded-full text-xs">
               +{tech.length - 3} more
@@ -58,7 +57,6 @@ const ProjectCard = ({ id, title, description, image, tech, code }) => {
 
         {/* Buttons */}
         <div className="flex gap-2 mt-auto">
-
           <a
             href={code}
             target="_blank"
@@ -74,7 +72,6 @@ const ProjectCard = ({ id, title, description, image, tech, code }) => {
           >
             <FaInfoCircle /> More Details
           </button>
-
         </div>
       </div>
     </div>

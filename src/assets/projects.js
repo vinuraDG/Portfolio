@@ -1,4 +1,5 @@
 // src/assets/projects.js
+
 import projectImg2 from './project2.png';
 import projectImg3 from './project3.png';
 import projectImg4 from './project4.png';
@@ -14,8 +15,7 @@ import {
   FaVuejs, FaFire, FaJava, FaShoppingCart, FaUserTie,
   FaMicrochip, FaCloud, FaDatabase, FaBluetooth, FaCarSide,
   FaTools, FaMobileAlt, FaReact, FaServer, FaCamera,
-  FaNodeJs, FaPython, FaBrain,
-  FaHtml5
+  FaNodeJs, FaPython, FaBrain, FaHtml5
 } from 'react-icons/fa';
 
 export const projects = [
@@ -26,7 +26,7 @@ export const projects = [
     longDescription: "TeaLink bridges the gap between tea land owners and collectors by digitizing the entire harvest-to-payment workflow. The app eliminates manual record-keeping, reduces payment disputes, and provides real-time harvest data to both parties. It features a collector dashboard for logging daily pickups, an owner portal for monitoring yields, and an automated payment calculation engine based on weight and quality grading.",
     image: projectImg2,
     tech: ["Flutter", "Firebase", "Local Storage", "Cloud Firestore", "Git & GitHub"],
-    icons: [FaMobileAlt,FaVuejs, FaFire, FaCloud, FaDatabase,],
+    icons: [FaMobileAlt, FaVuejs, FaFire, FaCloud, FaDatabase],
     code: "https://github.com/vinuraDG/TeaLink",
     features: [
       "Real-time harvest logging by collectors",

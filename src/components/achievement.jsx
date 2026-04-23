@@ -5,11 +5,6 @@ import { FaTrophy, FaAward, FaMobileAlt, FaCertificate } from "react-icons/fa";
 const Achievements = () => {
   const [activeTab, setActiveTab] = useState("awards");
 
-  const fadeInUp = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0 },
-  };
-
   const certificates = [
     {
       title: "Flutter and Dart: Developing iOS, Android, and Mobile Apps",
@@ -66,7 +61,7 @@ const Achievements = () => {
 
   const tabInactive = {
     ...tabBase,
-    background: "var(--bg-card)",
+    
     color: "var(--text-muted)",
     border: "1px solid var(--border-color)",
   };
@@ -78,15 +73,9 @@ const Achievements = () => {
       style={{ background: "var(--bg-primary)" }}
     >
       <div className="container mx-auto max-w-6xl">
+
         {/* Header */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          variants={fadeInUp}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <h2
             className="text-3xl font-bold text-center mb-4"
             style={{ color: "var(--text-primary)" }}
@@ -115,23 +104,17 @@ const Achievements = () => {
               <FaCertificate className="inline mr-2" /> Certificates
             </button>
           </div>
-        </motion.div>
+        </div>
 
         {/* Awards */}
         {activeTab === "awards" && (
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            variants={fadeInUp}
+          <div
             className="rounded-2xl shadow-2xl overflow-hidden"
             style={{
               background: "var(--bg-surface)",
               border: "1px solid var(--border-color)",
             }}
           >
-            {/* Header bar */}
             <div className="bg-gradient-to-r from-blue-700 to-blue-900 p-8">
               <div className="flex items-center gap-4 mb-4">
                 <FaTrophy className="text-yellow-400 text-5xl" />
@@ -142,7 +125,6 @@ const Achievements = () => {
               </div>
             </div>
 
-            {/* Content */}
             <div className="p-8">
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <motion.div
@@ -155,10 +137,7 @@ const Achievements = () => {
                 >
                   <FaAward className="text-yellow-400 text-3xl flex-shrink-0 mt-1" />
                   <div>
-                    <h4
-                      className="text-xl font-semibold mb-2"
-                      style={{ color: "var(--text-primary)" }}
-                    >
+                    <h4 className="text-xl font-semibold mb-2" style={{ color: "var(--text-primary)" }}>
                       People's Choice Award
                     </h4>
                     <p style={{ color: "var(--text-muted)", fontSize: "14px" }}>
@@ -175,15 +154,9 @@ const Achievements = () => {
                     border: "1px solid var(--accent-glow)",
                   }}
                 >
-                  <FaMobileAlt
-                    className="text-3xl flex-shrink-0 mt-1"
-                    style={{ color: "var(--accent)" }}
-                  />
+                  <FaMobileAlt className="text-3xl flex-shrink-0 mt-1" style={{ color: "var(--accent)" }} />
                   <div>
-                    <h4
-                      className="text-xl font-semibold mb-2"
-                      style={{ color: "var(--text-primary)" }}
-                    >
+                    <h4 className="text-xl font-semibold mb-2" style={{ color: "var(--text-primary)" }}>
                       Most Promising Technology Award
                     </h4>
                     <p style={{ color: "var(--text-muted)", fontSize: "14px" }}>
@@ -193,12 +166,8 @@ const Achievements = () => {
                 </motion.div>
               </div>
 
-              {/* About Project */}
               <div className="mb-8">
-                <h4
-                  className="text-2xl font-semibold mb-4"
-                  style={{ color: "var(--text-primary)" }}
-                >
+                <h4 className="text-2xl font-semibold mb-4" style={{ color: "var(--text-primary)" }}>
                   About the Project
                 </h4>
                 <p style={{ color: "var(--text-muted)", lineHeight: "1.75" }}>
@@ -208,11 +177,7 @@ const Achievements = () => {
                 </p>
               </div>
 
-              {/* Event Details */}
-              <div
-                className="pt-6"
-                style={{ borderTop: "1px solid var(--border-color)" }}
-              >
+              <div className="pt-6" style={{ borderTop: "1px solid var(--border-color)" }}>
                 <p className="text-sm" style={{ color: "var(--text-muted)" }}>
                   <span className="font-semibold" style={{ color: "var(--accent)" }}>Event: </span>
                   2nd International Conference on Applied Sports (ICAS)
@@ -224,12 +189,8 @@ const Achievements = () => {
                 </p>
               </div>
 
-              {/* Team Members */}
               <div className="mt-8">
-                <h4
-                  className="text-lg font-semibold mb-4"
-                  style={{ color: "var(--text-primary)" }}
-                >
+                <h4 className="text-lg font-semibold mb-4" style={{ color: "var(--text-primary)" }}>
                   Team Members
                 </h4>
                 <div className="flex flex-wrap gap-3">
@@ -251,27 +212,18 @@ const Achievements = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Certificates */}
         {activeTab === "certificates" && (
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={fadeInUp}
-            transition={{ duration: 0.8 }}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-          >
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certificates.map((cert, index) => (
               <motion.a
                 key={index}
                 href={cert.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ scale: 1.05, y: -5 }}
                 className="rounded-xl p-6 transition-all duration-300 shadow-lg block"
                 style={{
@@ -299,17 +251,15 @@ const Achievements = () => {
                       {cert.provider}
                     </span>
                   </div>
-                  <span
-                    className="text-sm font-semibold"
-                    style={{ color: "var(--accent)" }}
-                  >
+                  <span className="text-sm font-semibold" style={{ color: "var(--accent)" }}>
                     View →
                   </span>
                 </div>
               </motion.a>
             ))}
-          </motion.div>
+          </div>
         )}
+
       </div>
     </section>
   );
