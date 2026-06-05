@@ -10,12 +10,13 @@ import projectImg9 from './project8.png';
 import projectImg10 from './project9.png';
 import projectImg11 from './project10.png';
 import projectImg12 from './project11.png';
+import projectImg13 from './project12.png';
 
 import {
   FaVuejs, FaFire, FaJava, FaShoppingCart, FaUserTie,
   FaMicrochip, FaCloud, FaDatabase, FaBluetooth, FaCarSide,
   FaTools, FaMobileAlt, FaReact, FaServer, FaCamera,
-  FaNodeJs, FaPython, FaBrain, FaHtml5
+  FaNodeJs, FaPython, FaBrain, FaHtml5,FaDesktop,FaCashRegister,FaStore
 } from 'react-icons/fa';
 
 export const projects = [
@@ -100,6 +101,26 @@ export const projects = [
     status: "Completed",
     year: "2025",
   },
+  {
+    id: "bakery-pos-system",
+    title: "Bakery POS System",
+    description: "A powerful offline bakery point-of-sale system built with Dart and Flutter for Windows desktop environments.",
+    longDescription: "This Bakery POS System is designed to streamline bakery shop operations with a fast and user-friendly desktop interface. Built using Flutter and Dart for Windows, the system works completely offline using SQLite for secure local data storage. It supports product management, sales processing, invoice generation, stock tracking, and daily sales reporting. The responsive dashboard helps bakery owners manage transactions efficiently while ensuring smooth performance without requiring an internet connection.",
+    image: projectImg13,
+    tech: ["Dart", "Flutter", "SQLite", "Windows Desktop", "Git & GitHub"],
+    icons: [FaDesktop, FaDatabase, FaCashRegister, FaStore],
+    code: "https://github.com/vinuraDG/Bakery-POS-System",
+    features: [
+      "Offline POS billing and sales management",
+      "SQLite local database for secure data storage",
+      "Product and inventory management system",
+      "Invoice and receipt generation",
+      "Daily sales reports and transaction history"
+    ],
+    category: "Desktop Application",
+    status: "Completed",
+    year: "2026",
+},
   {
     id: "bluetooth-rc-car",
     title: "Bluetooth RC Car",

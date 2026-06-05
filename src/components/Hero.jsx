@@ -32,8 +32,8 @@ const Hero = () => {
   }, [displayedText, isDeleting, titles, currentTitleIndex]);
 
   const stats = [
-    { number: "10+", label: "Project done" },
-    { number: "5+", label: "Completed Certificates" },
+    { number: "20+", label: "Project done" },
+    { number: "10+", label: "Completed Certificates" },
   ];
 
   return (
@@ -92,6 +92,7 @@ const Hero = () => {
 
           <div className="flex space-x-4">
             <a
+             href="#projects"
               className="px-6 py-3 rounded-lg font-medium text-white transition duration-300 cursor-pointer"
             style={{
                   background: "var(--accent)",

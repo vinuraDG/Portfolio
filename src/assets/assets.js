@@ -14,6 +14,7 @@ import projectImg9 from './project8.png';
 import projectImg10 from './project9.png';
 import projectImg11 from './project10.png';
 import projectImg12 from './project11.png';
+import projectImg13 from './project12.png';
 import aboutImg from './about_image.png';
 
 export const assets = {
@@ -29,6 +30,7 @@ export const assets = {
     projectImg10,
     projectImg11,
     projectImg12,
+    projectImg13,
     aboutImg,
 };
 
