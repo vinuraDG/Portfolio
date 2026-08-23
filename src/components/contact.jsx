@@ -58,7 +58,6 @@ const Contact = () => {
       viewport={{ once: false, amount: 0.2 }}
       id="contact"
       className="py-20"
-      style={{ background: "var(--bg-primary)" }}
     >
       <div className="container mx-auto px-6">
         <h2

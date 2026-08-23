@@ -6,7 +6,6 @@ const Skills = () => {
     <div
       id="skills"
       className="py-20"
-     
     >
       <div className="container mx-auto px-6">
         <h2

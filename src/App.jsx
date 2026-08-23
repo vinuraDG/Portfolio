@@ -20,7 +20,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen" style={{ background: "var(--bg-primary)" }}>
+    <div className="relative min-h-screen">
       <ParticleBackground />
 
       <div className="relative z-10">

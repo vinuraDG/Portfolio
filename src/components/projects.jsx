@@ -9,13 +9,13 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-20 bg-black/20 overflow-hidden"
+      className="py-20 overflow-hidden"
     >
       <div className="w-full px-4 sm:px-6">
-        <h2 className="text-3xl font-bold text-center mb-4 text-white">
-          My <span className="text-blue-700">Projects</span>
+        <h2 className="text-3xl font-bold text-center mb-4" style={{ color: "var(--text-primary)" }}>
+          My <span style={{ color: "var(--accent)" }}>Projects</span>
         </h2>
-        <p className="text-gray-400 text-center max-w-2xl mx-auto mb-16">
+        <p className="text-center max-w-2xl mx-auto mb-16" style={{ color: "var(--text-muted)" }}>
           Selection of my recent work showcasing my skills and expertise
         </p>
 

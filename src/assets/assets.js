@@ -1,6 +1,6 @@
 // src/assets/assets.js
 
-import { FaLightbulb, FaPaintBrush, FaCode, FaReact, FaServer, FaMobileAlt, FaTools, FaLinux, FaDatabase } from 'react-icons/fa';
+import { FaLightbulb, FaPaintBrush, FaCode, FaReact, FaServer, FaMobileAlt, FaTools, FaLinux, FaDatabase, FaNodeJs, FaDocker, FaLeaf, FaMicrochip } from 'react-icons/fa';
 
 import profileImg from './profile.jpg';
 import projectImg2 from './project2.png';
@@ -66,7 +66,7 @@ export const skills = [
         title: 'Backend Development',
         icon: FaServer,
         description: 'Creating robust server-side applications and RESTful APIs.',
-        tags: ['Firebase']
+        tags: ['Spring Boot', 'Node.js', 'Firebase']
     },
     {
         title: 'Programming Languages',
@@ -78,7 +78,7 @@ export const skills = [
         title: 'Database Management',
         icon: FaDatabase,
         description: 'Designing and optimizing databases for performance and scalability.',
-        tags: ['MySQL', 'Firebase']
+        tags: ['MySQL', 'MongoDB', 'PostgreSQL', 'Firebase']
     },
     {
         title: 'Mobile Development',
@@ -93,9 +93,15 @@ export const skills = [
         tags: ['Linux (Ubuntu)', 'Command-line proficiency', 'Shell scripting']
     },
     {
+        title: 'IoT',
+        icon: FaMicrochip,
+        description: 'Building connected device systems and sensor-based solutions.',
+        tags: ['Arduino', 'Raspberry Pi', 'Sensors', 'MQTT']
+    },
+    {
         title: 'Tools & Technologies',
         icon: FaTools,
         description: 'Essential tools and technologies I use in my development workflow.',
-        tags: ['Git & GitHub', 'Figma']
+        tags: ['Git & GitHub', 'Docker', 'Postman', 'Figma']
     }
 ];

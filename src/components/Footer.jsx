@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div
       className="py-8"
-      style={{ background: "var(--bg-surface)", borderTop: "1px solid var(--border-color)" }}
+      style={{ background: "transparent", borderTop: "1px solid var(--border-color)" }}
     >
       <div className="container mx-auto px-6 text-center">
         <p style={{ color: "var(--text-muted)" }}>

@@ -120,20 +120,83 @@ const Hero = () => {
         </div>
 
         <div className="md:w-1/2 flex justify-center">
-          <div className="relative w-64 h-64 md:w-80 md:h-80 hex-container flex items-center justify-center">
-            <div className="absolute inset-0 hex-bg opacity-90"></div>
-            <motion.img
-              src={assets.projectImg6}
-              alt="Profile"
-              className="relative w-[90%] h-[89%] object-cover z-10"
-              style={{
-                transform: "rotate(-90deg) scale(1.46) translateY(-3%)",
-                objectFit: "cover",
-                objectPosition: "center top",
-                clipPath: "polygon(0% 0%, 100% 0%, 100% 62%, 87% 73%, 50% 92.9%, 12% 72%, 0% 50%)",
-              }}
-              transition={{ duration: 4, repeat: Infinity, repeatType: "loop", ease: "easeInOut" }}
-            />
+          <div className="flex items-center gap-5">
+
+            {/* Left badges */}
+            <div className="flex flex-col gap-5">
+              {[{ label: "Flutter", emoji: "📱", delay: 0 }, { label: "Python", emoji: "🐍", delay: 0.6 }].map(({ label, emoji, delay }) => (
+                <motion.div
+                  key={label}
+                  animate={{ x: [0, -5, 0] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay }}
+                  className="flex flex-col items-center gap-1"
+                >
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center text-xl shadow-xl"
+                    style={{ background: "var(--bg-surface)", border: "2px solid var(--accent)", boxShadow: "0 0 14px var(--accent-glow)" }}>
+                    {emoji}
+                  </div>
+                  <span className="text-xs font-bold px-2 py-0.5 rounded-full whitespace-nowrap"
+                    style={{ background: "var(--accent-soft)", color: "var(--accent)", border: "1px solid var(--accent-glow)" }}>
+                    {label}
+                  </span>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Photo with rings */}
+            <div className="relative flex items-center justify-center flex-shrink-0" style={{ width: 260, height: 260 }}>
+
+              {/* Pulsing outer ring */}
+              <motion.div
+                animate={{ scale: [1, 1.07, 1], opacity: [0.4, 0.12, 0.4] }}
+                transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute rounded-full pointer-events-none"
+                style={{ inset: -14, borderRadius: "50%", border: "1.5px solid var(--accent)", boxShadow: "0 0 30px var(--accent-glow)" }}
+              />
+
+              {/* Spinning arc ring */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 9, repeat: Infinity, ease: "linear" }}
+                className="absolute pointer-events-none"
+                style={{ inset: -4, borderRadius: "50%", background: "conic-gradient(from 0deg, var(--accent) 0%, transparent 50%, var(--accent) 100%)", padding: 2, borderRadius: "50%" }}
+              >
+                <div style={{ width: "100%", height: "100%", borderRadius: "50%", background: "var(--bg-primary)" }} />
+              </motion.div>
+
+              {/* Dashed ring */}
+              <div className="absolute rounded-full pointer-events-none"
+                style={{ inset: 4, borderRadius: "50%", border: "1px dashed var(--accent-glow)" }} />
+
+              {/* Photo */}
+              <div className="relative overflow-hidden rounded-full z-10"
+                style={{ width: 240, height: 240, border: "3px solid var(--accent)", boxShadow: "0 0 40px var(--accent-glow)" }}>
+                <img src={assets.projectImg6} alt="Vinura Deelaka"
+                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
+              </div>
+            </div>
+
+            {/* Right badges */}
+            <div className="flex flex-col gap-5">
+              {[{ label: "React", emoji: "⚛️", delay: 0.3 }, { label: "AI", emoji: "🤖", delay: 0.9 }].map(({ label, emoji, delay }) => (
+                <motion.div
+                  key={label}
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay }}
+                  className="flex flex-col items-center gap-1"
+                >
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center text-xl shadow-xl"
+                    style={{ background: "var(--bg-surface)", border: "2px solid var(--accent)", boxShadow: "0 0 14px var(--accent-glow)" }}>
+                    {emoji}
+                  </div>
+                  <span className="text-xs font-bold px-2 py-0.5 rounded-full whitespace-nowrap"
+                    style={{ background: "var(--accent-soft)", color: "var(--accent)", border: "1px solid var(--accent-glow)" }}>
+                    {label}
+                  </span>
+                </motion.div>
+              ))}
+            </div>
+
           </div>
         </div>
       </div>
