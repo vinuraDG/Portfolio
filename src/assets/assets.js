@@ -1,13 +1,21 @@
-import { FaLightbulb, FaPaintBrush, FaCode, FaReact, FaServer, FaMobileAlt, FaTools, FaNodeJs, FaStripe, FaVuejs, FaFire, FaDatabase, FaCloud, FaRobot } from 'react-icons/fa';
+// src/assets/assets.js
 
-// Only import images that actually exist
-import profileImg from '../assets/profile.jpg';
-import projectImg2 from '../assets/project2.png';
-import projectImg3 from '../assets/project3.png';
-import projectImg4 from '../assets/project4.png';
-import projectImg5 from '../assets/project5.png';
-import projectImg6 from '../assets/profileR.png';
+import { FaLightbulb, FaPaintBrush, FaCode, FaReact, FaServer, FaMobileAlt, FaTools, FaLinux, FaDatabase, FaNodeJs, FaDocker, FaLeaf, FaMicrochip } from 'react-icons/fa';
 
+import profileImg from './profile.jpg';
+import projectImg2 from './project2.png';
+import projectImg3 from './project3.png';
+import projectImg4 from './project4.png';
+import projectImg5 from './project5.png';
+import projectImg6 from './profileR.png';
+import projectImg7 from './project6.png';
+import projectImg8 from './project7.png';
+import projectImg9 from './project8.png';
+import projectImg10 from './project9.png';
+import projectImg11 from './project10.png';
+import projectImg12 from './project11.png';
+import projectImg13 from './project12.png';
+import aboutImg from './about_image.png';
 
 export const assets = {
     profileImg,
@@ -16,8 +24,14 @@ export const assets = {
     projectImg4,
     projectImg5,
     projectImg6,
-    
-    
+    projectImg7,
+    projectImg8,
+    projectImg9,
+    projectImg10,
+    projectImg11,
+    projectImg12,
+    projectImg13,
+    aboutImg,
 };
 
 export const aboutInfo = [
@@ -52,7 +66,7 @@ export const skills = [
         title: 'Backend Development',
         icon: FaServer,
         description: 'Creating robust server-side applications and RESTful APIs.',
-        tags: ['Firebase', 'Laravel']
+        tags: ['Spring Boot', 'Node.js', 'Firebase']
     },
     {
         title: 'Programming Languages',
@@ -64,7 +78,7 @@ export const skills = [
         title: 'Database Management',
         icon: FaDatabase,
         description: 'Designing and optimizing databases for performance and scalability.',
-        tags: ['MySQL', 'Firebase']
+        tags: ['MySQL', 'MongoDB', 'PostgreSQL', 'Firebase']
     },
     {
         title: 'Mobile Development',
@@ -73,10 +87,21 @@ export const skills = [
         tags: ['Flutter']
     },
     {
+        title: 'Operating Systems & Tools',
+        icon: FaLinux,
+        description: 'Experience with Linux environments and command-line tooling.',
+        tags: ['Linux (Ubuntu)', 'Command-line proficiency', 'Shell scripting']
+    },
+    {
+        title: 'IoT',
+        icon: FaMicrochip,
+        description: 'Building connected device systems and sensor-based solutions.',
+        tags: ['Arduino', 'Raspberry Pi', 'Sensors', 'MQTT']
+    },
+    {
         title: 'Tools & Technologies',
         icon: FaTools,
         description: 'Essential tools and technologies I use in my development workflow.',
-        tags: ['Git & GitHub', 'Figma']
+        tags: ['Git & GitHub', 'Docker', 'Postman', 'Figma']
     }
 ];
-
