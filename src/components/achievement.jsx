@@ -70,7 +70,7 @@ const Achievements = () => {
                       <span className="text-xs" style={{ color: "var(--text-muted)" }}>11 Aug 2026</span>
                     </div>
                     <h3 className="text-xl font-bold" style={{ color: "var(--text-primary)" }}>Best Presenter — 1st Place</h3>
-                    <p className="text-sm mt-0.5" style={{ color: "var(--text-muted)" }}>Final Year Project Presentation · B.Sc. (Hons) Computer Science &amp; Technology</p>
+                    <p className="text-sm mt-0.5" style={{ color: "var(--text-muted)" }}>Final Year Research Project Presentation · B.Sc. (Hons) Computer Science &amp; Technology</p>
                   </div>
                 </div>
                 <div className="p-6 grid sm:grid-cols-2 gap-4 text-sm">
