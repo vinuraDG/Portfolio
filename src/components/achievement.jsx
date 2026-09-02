@@ -1,24 +1,35 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaTrophy, FaAward, FaMobileAlt, FaCertificate, FaScroll, FaMedal, FaUsers, FaCalendarAlt, FaUniversity, FaTag } from "react-icons/fa";
+import { FaTrophy, FaAward, FaMobileAlt, FaCertificate, FaScroll, FaMedal, FaUsers, FaCalendarAlt, FaUniversity, FaTag, FaExternalLinkAlt, FaFilter } from "react-icons/fa";
 
 const Achievements = () => {
   const [activeTab, setActiveTab] = useState("awards");
 
+  const [certFilter, setCertFilter] = useState("All");
+
   const certificates = [
-    { title: "Flutter and Dart: Developing iOS, Android, and Mobile Apps", provider: "IBM", icon: "📱", link: "https://www.coursera.org/account/accomplishments/verify/INX2RZASBFQX" },
-    { title: "Machine Learning with Python", provider: "IBM", icon: "📊", link: "https://www.coursera.org/account/accomplishments/verify/WB45O7F6VP8S" },
-    { title: "Python for Data Science, AI & Development", provider: "IBM", icon: "🐍", link: "https://www.coursera.org/account/accomplishments/verify/03VCE0CEQFPE" },
-    { title: "Developing Front-End Apps with React", provider: "IBM", icon: "⚛️", link: "https://www.coursera.org/account/accomplishments/verify/IXPVAN24ERNS" },
-    { title: "Developing AI Applications with Python and Flask", provider: "IBM", icon: "🤖", link: "https://www.coursera.org/account/accomplishments/verify/FEVTOIQDZ42I" },
-    { title: "Getting Started with Git and GitHub", provider: "IBM", icon: "🔧", link: "https://www.coursera.org/account/accomplishments/verify/ZVK9EU11A8EQ" },
-    { title: "Hands-on Introduction to Linux Commands and Shell Scripting", provider: "IBM", icon: "💻", link: "https://www.coursera.org/account/accomplishments/verify/DG8SXGBE6KPX" },
+    { title: "Flutter and Dart: Developing iOS, Android, and Mobile Apps",         provider: "IBM",       icon: "📱", date: "2025", link: "https://www.coursera.org/account/accomplishments/verify/INX2RZASBFQX" },
+    { title: "Machine Learning with Python",                                         provider: "IBM",       icon: "📊", date: "2025", link: "https://www.coursera.org/account/accomplishments/verify/WB45O7F6VP8S" },
+    { title: "Python for Data Science, AI & Development",                            provider: "IBM",       icon: "🐍", date: "2025", link: "https://www.coursera.org/account/accomplishments/verify/03VCE0CEQFPE" },
+    { title: "Developing Front-End Apps with React",                                 provider: "IBM",       icon: "⚛️", date: "2025", link: "https://www.coursera.org/account/accomplishments/verify/IXPVAN24ERNS" },
+    { title: "Developing AI Applications with Python and Flask",                     provider: "IBM",       icon: "🤖", date: "2025", link: "https://www.coursera.org/account/accomplishments/verify/FEVTOIQDZ42I" },
+    { title: "Getting Started with Git and GitHub",                                  provider: "IBM",       icon: "🔧", date: "2025", link: "https://www.coursera.org/account/accomplishments/verify/ZVK9EU11A8EQ" },
+    { title: "Hands-on Introduction to Linux Commands and Shell Scripting",          provider: "IBM",       icon: "💻", date: "2025", link: "https://www.coursera.org/account/accomplishments/verify/DG8SXGBE6KPX" },
+    { title: "The Arduino Platform and C Programming",                               provider: "UC Irvine", icon: "🔌", date: "2026",  link: "https://coursera.org/verify/9SKQ665KSRFL" },
+    { title: "Introduction to the Internet of Things and Embedded Systems",          provider: "UC Irvine", icon: "📡", date: "2026",  link: "https://coursera.org/verify/1UT6FMGKYNIT" },
   ];
 
+  const providers = ["All", "IBM", "UC Irvine"];
+  const providerMeta = {
+    IBM:       { color: "#1447E6", bg: "rgba(20,71,230,0.12)",  border: "rgba(20,71,230,0.35)",  label: "IBM"       },
+    "UC Irvine": { color: "#003366", bg: "rgba(0,51,102,0.12)", border: "rgba(0,100,200,0.35)", label: "UC Irvine" },
+  };
+  const filtered = certFilter === "All" ? certificates : certificates.filter(c => c.provider === certFilter);
+
   const tabs = [
-    { id: "awards", label: "Awards", icon: <FaTrophy /> },
-    { id: "publications", label: "Publications", icon: <FaScroll /> },
-    { id: "certificates", label: "Certificates", icon: <FaCertificate /> },
+    { id: "awards",        label: "Awards",       icon: <FaTrophy />,      count: null },
+    { id: "publications",  label: "Publications", icon: <FaScroll />,      count: null },
+    { id: "certificates",  label: "Certificates", icon: <FaCertificate />, count: 9    },
   ];
 
   const tabBase = {
@@ -47,6 +58,12 @@ const Achievements = () => {
             {tabs.map(t => (
               <button key={t.id} onClick={() => setActiveTab(t.id)} style={activeTab === t.id ? tabActive : tabInactive}>
                 {t.icon} {t.label}
+                {t.count && (
+                  <span className="ml-1 text-xs font-bold px-1.5 py-0.5 rounded-full"
+                    style={{ background: activeTab === t.id ? "rgba(255,255,255,0.25)" : "var(--accent-soft)", color: activeTab === t.id ? "#fff" : "var(--accent)" }}>
+                    {t.count}
+                  </span>
+                )}
               </button>
             ))}
           </div>
@@ -195,30 +212,101 @@ const Achievements = () => {
 
           {/* ── CERTIFICATES ── */}
           {activeTab === "certificates" && (
-            <motion.div key="certificates" {...fadeUp} className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-              {certificates.map((cert, index) => (
-                <motion.a
-                  key={index}
-                  href={cert.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ y: -4 }}
-                  className="rounded-xl p-5 flex flex-col shadow-md"
-                  style={{ background: "var(--bg-surface)", border: "1px solid var(--border-color)", textDecoration: "none", transition: "border-color 0.2s" }}
-                  onMouseEnter={e => e.currentTarget.style.borderColor = "var(--accent)"}
-                  onMouseLeave={e => e.currentTarget.style.borderColor = "var(--border-color)"}
-                >
-                  <div className="text-3xl mb-3">{cert.icon}</div>
-                  <h3 className="text-sm font-semibold leading-snug flex-1" style={{ color: "var(--text-primary)" }}>{cert.title}</h3>
-                  <div className="flex items-center justify-between mt-4 pt-4" style={{ borderTop: "1px solid var(--border-color)" }}>
-                    <div className="flex items-center gap-2">
-                      <FaCertificate style={{ color: "var(--accent)" }} />
-                      <span className="text-sm font-semibold" style={{ color: "var(--accent)" }}>{cert.provider}</span>
-                    </div>
-                    <span className="text-xs font-semibold" style={{ color: "var(--accent)" }}>View →</span>
+            <motion.div key="certificates" {...fadeUp}>
+
+              {/* Stats bar */}
+              <div className="flex flex-wrap items-center justify-between gap-4 mb-6 p-4 rounded-2xl"
+                style={{ background: "var(--bg-surface)", border: "1px solid var(--border-color)" }}>
+                <div className="flex items-center gap-6">
+                  <div className="text-center">
+                    <p className="text-2xl font-bold" style={{ color: "var(--accent)" }}>{certificates.length}</p>
+                    <p className="text-xs" style={{ color: "var(--text-muted)" }}>Total</p>
                   </div>
-                </motion.a>
-              ))}
+                  {Object.entries(providerMeta).map(([name, meta]) => (
+                    <div key={name} className="text-center">
+                      <p className="text-2xl font-bold" style={{ color: meta.color }}>
+                        {certificates.filter(c => c.provider === name).length}
+                      </p>
+                      <p className="text-xs" style={{ color: "var(--text-muted)" }}>{name}</p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Filter pills */}
+                <div className="flex items-center gap-2 flex-wrap">
+                  <FaFilter size={12} style={{ color: "var(--text-muted)" }} />
+                  {providers.map(p => (
+                    <button key={p} onClick={() => setCertFilter(p)}
+                      className="text-xs font-semibold px-3 py-1.5 rounded-full transition-all duration-200"
+                      style={certFilter === p
+                        ? { background: "var(--accent)", color: "#fff", border: "1px solid var(--accent)" }
+                        : { background: "transparent", color: "var(--text-muted)", border: "1px solid var(--border-color)" }
+                      }>
+                      {p} {p !== "All" && `(${certificates.filter(c => c.provider === p).length})`}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Cards grid */}
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <AnimatePresence mode="popLayout">
+                  {filtered.map((cert, index) => {
+                    const meta = providerMeta[cert.provider];
+                    return (
+                      <motion.a
+                        key={cert.title}
+                        layout
+                        initial={{ opacity: 0, scale: 0.92 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.88 }}
+                        transition={{ duration: 0.25, delay: index * 0.04 }}
+                        whileHover={{ y: -5 }}
+                        href={cert.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="rounded-2xl flex flex-col overflow-hidden shadow-lg group"
+                        style={{ background: "var(--bg-surface)", border: `1px solid var(--border-color)`, textDecoration: "none", transition: "border-color 0.2s, box-shadow 0.2s" }}
+                        onMouseEnter={e => { e.currentTarget.style.borderColor = meta.color; e.currentTarget.style.boxShadow = `0 8px 32px ${meta.border}`; }}
+                        onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--border-color)"; e.currentTarget.style.boxShadow = "none"; }}
+                      >
+                        {/* Top accent stripe */}
+                        <div className="h-1 w-full" style={{ background: `linear-gradient(90deg, ${meta.color}, transparent)` }} />
+
+                        <div className="p-5 flex flex-col flex-1">
+                          {/* Provider badge + icon row */}
+                          <div className="flex items-start justify-between mb-3">
+                            <span className="text-xs font-bold px-2.5 py-1 rounded-full"
+                              style={{ background: meta.bg, color: meta.color, border: `1px solid ${meta.border}` }}>
+                              {cert.provider}
+                            </span>
+                            <span className="text-2xl">{cert.icon}</span>
+                          </div>
+
+                          {/* Title */}
+                          <h3 className="text-sm font-semibold leading-snug flex-1 mb-3" style={{ color: "var(--text-primary)" }}>
+                            {cert.title}
+                          </h3>
+
+                          {/* Footer */}
+                          <div className="flex items-center justify-between pt-3"
+                            style={{ borderTop: "1px solid var(--border-color)" }}>
+                            <div className="flex items-center gap-1.5">
+                              <FaCalendarAlt size={10} style={{ color: "var(--text-muted)" }} />
+                              <span className="text-xs" style={{ color: "var(--text-muted)" }}>{cert.date}</span>
+                            </div>
+                            <span className="flex items-center gap-1 text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity"
+                              style={{ color: meta.color }}>
+                              Verify <FaExternalLinkAlt size={9} />
+                            </span>
+                          </div>
+                        </div>
+                      </motion.a>
+                    );
+                  })}
+                </AnimatePresence>
+              </div>
+
             </motion.div>
           )}
 
