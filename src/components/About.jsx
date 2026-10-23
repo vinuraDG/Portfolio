@@ -57,7 +57,7 @@ const About = () => {
                 {/* Image */}
                 <img
                   src={assets.aboutImg}
-                  alt="Vinura Deelaka"
+                  alt="Vinura Deelaka, Flutter developer"
                   className="w-full h-full object-cover object-top"
                   style={{
                     maskImage: "linear-gradient(to bottom, black 75%, transparent 100%)",

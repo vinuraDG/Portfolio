@@ -63,11 +63,11 @@ const Hero = () => {
           </h2>
 
           <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>
-            I create elegant mobile applications that blend performance with beautiful design.
-            My focus is on delivering user-centered experiences through Flutter development,
-            thoughtful UI/UX design, and AI-driven innovation. I love turning complex ideas
-            into simple, functional, and impactful digital products.
-          </p>
+  I'm a Flutter developer from Sri Lanka. I create elegant mobile applications that blend performance with beautiful design.
+  My focus is on delivering user-centered experiences through Flutter development,
+  thoughtful UI/UX design, and AI-driven innovation. I love turning complex ideas
+  into simple, functional, and impactful digital products.
+</p>
 
           {/* Statistics */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-9 mb-10">
@@ -171,7 +171,7 @@ const Hero = () => {
               {/* Photo */}
               <div className="relative overflow-hidden rounded-full z-10"
                 style={{ width: 240, height: 240, border: "3px solid var(--accent)", boxShadow: "0 0 40px var(--accent-glow)" }}>
-                <img src={assets.projectImg6} alt="Vinura Deelaka"
+                <img src={assets.projectImg6} alt="Vinura Deelaka, Flutter developer from Sri Lanka"
                   style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
               </div>
             </div>
