@@ -4,7 +4,7 @@ import {
   FaEnvelope, FaFacebook, FaGithub, FaMedium,
   FaMapMarkerAlt, FaPhone,
 } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa6";
+import { FaLinkedin, FaResearchgate } from "react-icons/fa6";
 
 const inputStyle = {
   width: "100%",
@@ -48,6 +48,7 @@ const Contact = () => {
     { href: "https://www.linkedin.com/in/vinuradeelaka/", icon: FaLinkedin },
     { href: "https://web.facebook.com/vinura.deelaka.5/", icon: FaFacebook },
     { href: "https://medium.com/@vinuragamage123", icon: FaMedium },
+    { href: "https://www.researchgate.net/profile/Vinura-Deelaka", icon: FaResearchgate },
   ];
 
   return (

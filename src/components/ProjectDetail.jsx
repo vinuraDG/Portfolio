@@ -2,6 +2,8 @@
 
 import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
+import SEO from "./SEO";
 import { projects } from "../assets/projects";
 import {
   FaGithub,
@@ -20,6 +22,10 @@ const ProjectDetail = () => {
   if (!project) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-[var(--bg-primary)] text-[var(--text-primary)]">
+        <Helmet>
+          <title>Project not found | Vinura Deelaka</title>
+          <meta name="robots" content="noindex" />
+        </Helmet>
         <p className="text-2xl mb-4">Project not found.</p>
         <button
           onClick={() => navigate("/")}
@@ -31,8 +37,22 @@ const ProjectDetail = () => {
     );
   }
 
+  // Short meta description built from the project's long description
+  const summary = (project.longDescription || "").replace(/\s+/g, " ").trim();
+  const metaDescription = summary
+    ? summary.length > 155
+      ? summary.slice(0, summary.lastIndexOf(" ", 155)) + "…"
+      : summary
+    : `${project.title}, a ${project.category} project by Vinura Deelaka.`;
+
   return (
     <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)]">
+
+      <SEO
+        title={`${project.title} | Vinura Deelaka`}
+        description={metaDescription}
+        path={`/project/${id}`}
+      />
 
       {/* Hero */}
       <div className="relative w-full h-64 sm:h-80 md:h-96 overflow-hidden">
