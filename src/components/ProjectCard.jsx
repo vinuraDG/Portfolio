@@ -1,11 +1,9 @@
 // src/components/ProjectCard.jsx
 
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaGithub, FaInfoCircle } from "react-icons/fa";
 
 const ProjectCard = ({ id, title, description, image, tech, code }) => {
-  const navigate = useNavigate();
-
   return (
     <div className="group bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl overflow-hidden hover:-translate-y-2 hover:border-[var(--accent)]/40 hover:shadow-2xl hover:shadow-[var(--accent-glow)] transition-all duration-300 cursor-pointer w-full min-w-0 flex flex-col h-full">
 
@@ -18,12 +16,12 @@ const ProjectCard = ({ id, title, description, image, tech, code }) => {
         />
 
         <div className="absolute inset-0 bg-[var(--accent)]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-          <button
-            onClick={() => navigate(`/project/${id}`)}
+          <Link
+            to={`/project/${id}`}
             className="px-5 py-2 bg-white text-[var(--accent)] rounded-full font-semibold text-sm flex items-center gap-2 hover:scale-105 transition-transform duration-200 shadow-lg"
           >
             <FaInfoCircle /> View Details
-          </button>
+          </Link>
         </div>
       </div>
 
@@ -66,12 +64,12 @@ const ProjectCard = ({ id, title, description, image, tech, code }) => {
             <FaGithub /> Code
           </a>
 
-          <button
-            onClick={() => navigate(`/project/${id}`)}
+          <Link
+            to={`/project/${id}`}
             className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-[var(--accent)]/30 border border-[var(--accent)]/30 rounded-lg text-sm font-medium hover:bg-[var(--accent)] transition text-[var(--text-primary)]"
           >
             <FaInfoCircle /> More Details
-          </button>
+          </Link>
         </div>
       </div>
     </div>
