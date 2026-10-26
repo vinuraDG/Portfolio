@@ -159,7 +159,7 @@ const Hero = () => {
                 animate={{ rotate: 360 }}
                 transition={{ duration: 9, repeat: Infinity, ease: "linear" }}
                 className="absolute pointer-events-none"
-                style={{ inset: -4, borderRadius: "50%", background: "conic-gradient(from 0deg, var(--accent) 0%, transparent 50%, var(--accent) 100%)", padding: 2, borderRadius: "50%" }}
+                style={{ inset: -4, borderRadius: "50%", background: "conic-gradient(from 0deg, var(--accent) 0%, transparent 50%, var(--accent) 100%)", padding: 2 }}
               >
                 <div style={{ width: "100%", height: "100%", borderRadius: "50%", background: "var(--bg-primary)" }} />
               </motion.div>
