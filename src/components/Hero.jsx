@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { assets } from "../assets/assets";
 
 const Hero = () => {
-  const titles = ["Flutter Developer", "UI/UX Designer", "AI Enthusiast"];
+  const titles = ["Software Engineer", "Flutter Developer", "Full Stack Developer", "AI Enthusiast"];
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -63,10 +63,10 @@ const Hero = () => {
           </h2>
 
           <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>
-  I'm a Flutter developer from Sri Lanka. I create elegant mobile applications that blend performance with beautiful design.
-  My focus is on delivering user-centered experiences through Flutter development,
-  thoughtful UI/UX design, and AI-driven innovation. I love turning complex ideas
-  into simple, functional, and impactful digital products.
+  I'm a Software Engineer from Sri Lanka, building across mobile, web, backend, and AI.
+  I craft cross-platform mobile apps with Flutter, scalable backends with Node.js and Spring Boot,
+  interactive web apps with React, and intelligent systems powered by machine learning.
+  I love turning complex ideas into clean, impactful digital products.
 </p>
 
           {/* Statistics */}
@@ -124,7 +124,7 @@ const Hero = () => {
 
             {/* Left badges */}
             <div className="flex flex-col gap-5">
-              {[{ label: "Flutter", emoji: "📱", delay: 0 }, { label: "Python", emoji: "🐍", delay: 0.6 }].map(({ label, emoji, delay }) => (
+              {[{ label: "Flutter", emoji: "📱", delay: 0 }, { label: "Web", emoji: "🌐", delay: 0.6 }].map(({ label, emoji, delay }) => (
                 <motion.div
                   key={label}
                   animate={{ x: [0, -5, 0] }}
@@ -171,14 +171,14 @@ const Hero = () => {
               {/* Photo */}
               <div className="relative overflow-hidden rounded-full z-10"
                 style={{ width: 240, height: 240, border: "3px solid var(--accent)", boxShadow: "0 0 40px var(--accent-glow)" }}>
-                <img src={assets.projectImg6} alt="Vinura Deelaka, Flutter developer from Sri Lanka"
+                <img src={assets.projectImg6} alt="Vinura Deelaka, Software Engineer from Sri Lanka"
                   style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
               </div>
             </div>
 
             {/* Right badges */}
             <div className="flex flex-col gap-5">
-              {[{ label: "React", emoji: "⚛️", delay: 0.3 }, { label: "AI", emoji: "🤖", delay: 0.9 }].map(({ label, emoji, delay }) => (
+              {[{ label: "React", emoji: "⚛️", delay: 0.3 }, { label: "Backend", emoji: "🖥️", delay: 0.9 }].map(({ label, emoji, delay }) => (
                 <motion.div
                   key={label}
                   animate={{ x: [0, 5, 0] }}

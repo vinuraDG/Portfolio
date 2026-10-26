@@ -1,6 +1,6 @@
 // src/assets/assets.js
 
-import { FaLightbulb, FaPaintBrush, FaCode, FaReact, FaServer, FaMobileAlt, FaTools, FaLinux, FaDatabase, FaNodeJs, FaDocker, FaLeaf, FaMicrochip } from 'react-icons/fa';
+import { FaLightbulb, FaPaintBrush, FaCode, FaReact, FaServer, FaMobileAlt, FaTools, FaLinux, FaDatabase, FaNodeJs, FaDocker, FaLeaf, FaMicrochip, FaBrain } from 'react-icons/fa';
 
 import profileImg from './profile.jpg';
 import projectImg2 from './project2.png';
@@ -57,10 +57,10 @@ export const aboutInfo = [
 
 export const skills = [
     {
-        title: 'Frontend Development',
+        title: 'Web Development',
         icon: FaReact,
-        description: 'Building responsive and interactive user interfaces with modern frameworks.',
-        tags: ['React']
+        description: 'Building responsive and interactive user interfaces with modern frameworks and tools.',
+        tags: ['React', 'HTML', 'CSS', 'TailwindCSS']
     },
     {
         title: 'Backend Development',
@@ -99,9 +99,15 @@ export const skills = [
         tags: ['Arduino', 'Raspberry Pi', 'Sensors', 'MQTT']
     },
     {
+        title: 'AI & Machine Learning',
+        icon: FaBrain,
+        description: 'Building intelligent systems with computer vision, OCR, and ML pipelines.',
+        tags: ['TensorFlow', 'PyTorch', 'YOLOv8', 'OpenCV', 'Python']
+    },
+    {
         title: 'Tools & Technologies',
         icon: FaTools,
         description: 'Essential tools and technologies I use in my development workflow.',
-        tags: ['Git & GitHub', 'Docker', 'Postman', 'Figma']
+        tags: ['Git & GitHub', 'Docker', 'GitHub Actions', 'Postman', 'Figma']
     }
 ];

@@ -12,8 +12,8 @@ const Home = () => {
     return(
         <main>
             <SEO
-                title="Vinura Deelaka | Flutter Developer Portfolio"
-                description="Portfolio of Vinura Deelaka, a Flutter developer from Sri Lanka building clean, high-performance mobile apps. Explore projects, skills and certificates."
+                title="Vinura Deelaka | Software Engineer Portfolio"
+                description="Portfolio of Vinura Deelaka, a Software Engineer from Sri Lanka building mobile, web, backend, and AI-powered applications. Explore projects, skills and certificates."
                 path="/"
             />
             <Hero />
