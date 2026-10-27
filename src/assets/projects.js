@@ -11,6 +11,7 @@ import projectImg10 from './project9.png';
 import projectImg11 from './project10.png';
 import projectImg12 from './project11.png';
 import projectImg13 from './project12.png';
+import projectImg14 from './project13.jpg';
 
 import {
   FaVuejs, FaFire, FaJava, FaShoppingCart, FaUserTie,
@@ -45,7 +46,7 @@ export const projects = [
     title: "MSC Loyalty App",
     description: "A production loyalty rewards app live on Google Play — earn points, track balance in real time, and redeem via QR code. Freelance project; I built the full Flutter frontend.",
     longDescription: "MSC Loyalty App is a live production app for PL.MTT. Muthukaruppan Chettiar, published on the Google Play Store. It digitises the loyalty card experience — customers earn points on every purchase, view their balance and full transaction history, and redeem rewards instantly via a built-in QR code scanner. Store staff use a separate OTP-secured flow to verify and process redemptions. I was responsible for the complete Flutter frontend: UI design, state management, API integration with the .NET backend, QR scanning, and secure authentication flows. The backend was developed by a separate developer using .NET.",
-    image: null,
+    image: projectImg14,
     tech: ["Flutter", "Dart", "REST API", ".NET Backend", "Git & GitHub"],
     icons: [FaMobileAlt, FaQrcode, FaStar, FaServer, FaDatabase],
     live: "https://play.google.com/store/apps/details?id=com.mscloyalty.app",
