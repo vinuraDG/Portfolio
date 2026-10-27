@@ -16,10 +16,32 @@ import {
   FaVuejs, FaFire, FaJava, FaShoppingCart, FaUserTie,
   FaMicrochip, FaCloud, FaDatabase, FaBluetooth, FaCarSide,
   FaTools, FaMobileAlt, FaReact, FaServer, FaCamera,
-  FaNodeJs, FaPython, FaBrain, FaHtml5,FaDesktop,FaCashRegister,FaStore
+  FaNodeJs, FaPython, FaBrain, FaHtml5,FaDesktop,FaCashRegister,FaStore,FaQrcode,FaStar
 } from 'react-icons/fa';
 
 export const projects = [
+  {
+    id: "msc-loyalty",
+    title: "MSC Loyalty App",
+    description: "A production loyalty rewards app live on Google Play — earn points, track balance in real time, and redeem via QR code. Freelance project; I built the full Flutter frontend.",
+    longDescription: "MSC Loyalty App is a live production app for PL.MTT. Muthukaruppan Chettiar, published on the Google Play Store. It digitises the loyalty card experience — customers earn points on every purchase, view their balance and full transaction history, and redeem rewards instantly via a built-in QR code scanner. Store staff use a separate OTP-secured flow to verify and process redemptions. I was responsible for the complete Flutter frontend: UI design, state management, API integration with the .NET backend, QR scanning, and secure authentication flows. The backend was developed by a separate developer using .NET.",
+    image: null,
+    tech: ["Flutter", "Dart", "REST API", ".NET Backend", "Git & GitHub"],
+    icons: [FaMobileAlt, FaQrcode, FaStar, FaServer, FaDatabase],
+    live: "https://play.google.com/store/apps/details?id=com.mscloyalty.app",
+    features: [
+      "Real-time loyalty points balance and transaction history",
+      "QR code-based contactless point redemption",
+      "Secure login with password recovery",
+      "OTP-based staff verification flow for processing redemptions",
+      "Full REST API integration with .NET backend",
+      "Live on Google Play Store — 10+ downloads"
+    ],
+    category: "Mobile App",
+    status: "Production",
+    year: "2026",
+    role: "Flutter Frontend Developer (Freelance)",
+  },
   {
     id: "tealink",
     title: "TeaLink",

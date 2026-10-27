@@ -11,7 +11,8 @@ import {
   FaCheckCircle,
   FaTag,
   FaCalendarAlt,
-  FaLayerGroup
+  FaLayerGroup,
+  FaGooglePlay
 } from "react-icons/fa";
 
 const ProjectDetail = () => {
@@ -56,13 +57,24 @@ const ProjectDetail = () => {
 
       {/* Hero */}
       <div className="relative w-full h-64 sm:h-80 md:h-96 overflow-hidden">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full h-full object-cover"
-        />
+        {project.image ? (
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-full object-cover"
+          />
+        ) : (
+          <div className="w-full h-full flex flex-col items-center justify-center gap-3"
+            style={{ background: "linear-gradient(135deg, var(--accent-soft) 0%, var(--bg-elevated) 50%, var(--bg-primary) 100%)" }}>
+            <FaGooglePlay className="text-6xl" style={{ color: "var(--accent)" }} />
+            <span className="text-lg font-bold" style={{ color: "var(--text-primary)" }}>{project.title}</span>
+            <span className="text-xs font-semibold px-4 py-1.5 rounded-full" style={{ background: "var(--accent)", color: "white" }}>
+              Production App
+            </span>
+          </div>
+        )}
 
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-[var(--bg-primary)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 to-[var(--bg-primary)]" />
 
         <button
           onClick={() => navigate(-1)}
@@ -147,18 +159,29 @@ const ProjectDetail = () => {
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
 
-            <a
-              href={project.code}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 py-3 bg-[var(--accent)] text-white rounded-xl font-semibold hover:opacity-90 transition"
-              style={{
-                  background: "var(--accent)",
-                  color: "white",
-                }}
-            >
-              <FaGithub /> View Code
-            </a>
+            {project.code && (
+              <a
+                href={project.code}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-semibold hover:opacity-90 transition"
+                style={{ background: "var(--accent)", color: "white" }}
+              >
+                <FaGithub /> View Code
+              </a>
+            )}
+
+            {project.live && (
+              <a
+                href={project.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-semibold hover:opacity-90 transition"
+                style={{ background: "var(--accent)", color: "white" }}
+              >
+                <FaGooglePlay /> View on Play Store
+              </a>
+            )}
 
             <button
               onClick={() => navigate(-1)}

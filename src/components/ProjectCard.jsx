@@ -1,19 +1,30 @@
 // src/components/ProjectCard.jsx
 
 import { Link } from "react-router-dom";
-import { FaGithub, FaInfoCircle } from "react-icons/fa";
+import { FaGithub, FaInfoCircle, FaGooglePlay } from "react-icons/fa";
 
-const ProjectCard = ({ id, title, description, image, tech, code }) => {
+const ProjectCard = ({ id, title, description, image, tech, code, live, status }) => {
   return (
     <div className="group bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl overflow-hidden hover:-translate-y-2 hover:border-[var(--accent)]/40 hover:shadow-2xl hover:shadow-[var(--accent-glow)] transition-all duration-300 cursor-pointer w-full min-w-0 flex flex-col h-full">
 
       {/* Image */}
       <div className="relative overflow-hidden flex-shrink-0">
-        <img
-          src={image}
-          alt={title}
-          className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
-        />
+        {image ? (
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+        ) : (
+          <div className="w-full h-48 flex flex-col items-center justify-center gap-2"
+            style={{ background: "linear-gradient(135deg, var(--accent-soft) 0%, var(--bg-elevated) 100%)" }}>
+            <FaGooglePlay className="text-4xl" style={{ color: "var(--accent)" }} />
+            <span className="text-xs font-semibold px-3 py-1 rounded-full"
+              style={{ background: "var(--accent)", color: "white" }}>
+              Production App
+            </span>
+          </div>
+        )}
 
         <div className="absolute inset-0 bg-[var(--accent)]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
           <Link
@@ -55,14 +66,26 @@ const ProjectCard = ({ id, title, description, image, tech, code }) => {
 
         {/* Buttons */}
         <div className="flex gap-2 mt-auto">
-          <a
-            href={code}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-3 py-2 bg-[var(--bg-elevated)] border border-[var(--border-color)] rounded-lg text-sm font-medium hover:bg-[var(--bg-card)] transition text-[var(--text-primary)]"
-          >
-            <FaGithub /> Code
-          </a>
+          {code && (
+            <a
+              href={code}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-3 py-2 bg-[var(--bg-elevated)] border border-[var(--border-color)] rounded-lg text-sm font-medium hover:bg-[var(--bg-card)] transition text-[var(--text-primary)]"
+            >
+              <FaGithub /> Code
+            </a>
+          )}
+          {live && (
+            <a
+              href={live}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-3 py-2 bg-[var(--bg-elevated)] border border-[var(--border-color)] rounded-lg text-sm font-medium hover:bg-[var(--bg-card)] transition text-[var(--text-primary)]"
+            >
+              <FaGooglePlay /> Play Store
+            </a>
+          )}
 
           <Link
             to={`/project/${id}`}
