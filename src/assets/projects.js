@@ -21,6 +21,26 @@ import {
 
 export const projects = [
   {
+    id: "tealink",
+    title: "TeaLink",
+    description: "TeaLink is a mobile app designed to help tea land owners (customers) and tea collectors manage the tea harvest and payment process more easily and efficiently.",
+    longDescription: "TeaLink bridges the gap between tea land owners and collectors by digitizing the entire harvest-to-payment workflow. The app eliminates manual record-keeping, reduces payment disputes, and provides real-time harvest data to both parties. It features a collector dashboard for logging daily pickups, an owner portal for monitoring yields, and an automated payment calculation engine based on weight and quality grading.",
+    image: projectImg2,
+    tech: ["Flutter", "Firebase", "Local Storage", "Cloud Firestore", "Git & GitHub"],
+    icons: [FaMobileAlt, FaVuejs, FaFire, FaCloud, FaDatabase],
+    code: "https://github.com/vinuraDG/TeaLink",
+    features: [
+      "Real-time harvest logging by collectors",
+      "Automated payment calculation based on weight & grade",
+      "Owner dashboard with yield analytics",
+      "Push notifications for payment updates",
+      "Offline-first data sync with Cloud Firestore"
+    ],
+    category: "Mobile App",
+    status: "Completed",
+    year: "2025",
+  },
+  {
     id: "msc-loyalty",
     title: "MSC Loyalty App",
     description: "A production loyalty rewards app live on Google Play — earn points, track balance in real time, and redeem via QR code. Freelance project; I built the full Flutter frontend.",
@@ -41,26 +61,6 @@ export const projects = [
     status: "Production",
     year: "2026",
     role: "Flutter Frontend Developer (Freelance)",
-  },
-  {
-    id: "tealink",
-    title: "TeaLink",
-    description: "TeaLink is a mobile app designed to help tea land owners (customers) and tea collectors manage the tea harvest and payment process more easily and efficiently.",
-    longDescription: "TeaLink bridges the gap between tea land owners and collectors by digitizing the entire harvest-to-payment workflow. The app eliminates manual record-keeping, reduces payment disputes, and provides real-time harvest data to both parties. It features a collector dashboard for logging daily pickups, an owner portal for monitoring yields, and an automated payment calculation engine based on weight and quality grading.",
-    image: projectImg2,
-    tech: ["Flutter", "Firebase", "Local Storage", "Cloud Firestore", "Git & GitHub"],
-    icons: [FaMobileAlt, FaVuejs, FaFire, FaCloud, FaDatabase],
-    code: "https://github.com/vinuraDG/TeaLink",
-    features: [
-      "Real-time harvest logging by collectors",
-      "Automated payment calculation based on weight & grade",
-      "Owner dashboard with yield analytics",
-      "Push notifications for payment updates",
-      "Offline-first data sync with Cloud Firestore"
-    ],
-    category: "Mobile App",
-    status: "Completed",
-    year: "2025",
   },
   {
     id: "unigpa",
